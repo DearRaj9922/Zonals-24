@@ -1,48 +1,180 @@
-/* src/home.css */
-body, html {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    /* overflow: hidden; */
-}
-
-.map-container {
+.body {
+    width: 100vw;
+    height: 100vh;
+    /* overflow: hidden; To prevent scrollbars during zoom */
     position: relative;
-    width: 100%;
-    height: auto; /* Ensure full viewport height */
-    overflow: hidden; /* Ensure no scrollbars */
-}
-
-/* #map-image {
-    width: 100%;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+  .body::-webkit-scrollbar {
+    display: none; /* For Chrome, Safari, and Opera */
+  }
+  
+  .map-img {
+    width: 100vw;
     height: auto;
-    transition: transform 0.3s ease;
-} */
-#map-image {
-    display: block;
-    max-width: 100%;
-    max-height: 100%;
-    margin: auto;
-    opacity: 0.3;
-    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+    z-index: -1;
+    position: absolute;
+    transition: transform 0.5s ease-in-out; /* Smooth zoom transition */
   }
   
-  #map-image.fade-in {
-    opacity: 1;
-    transform: scale(1);
-  }
-  
-  #map-image.fade-out {
-    opacity: 0;
-    transform: scale(0);
-  }
-
-#map-image.zoom {
-    transform: scale(1.5);
-}
-
-.map-area {
-    outline: none;
+  .area1, .area2, .area3, .area4 {
+    border-radius: 50%;
+    background-color: red;
+    opacity: 0.5;
     z-index: 1;
-    cursor: pointer; /* Ensures cursor changes on hover */
-}
+    position: absolute;
+    transition: transform 0.5s ease-in-out; /* Smooth transition for the areas */
+  }
+  
+  .area1:hover, .area2:hover, .area3:hover, .area4:hover {
+    transform: scale(1.5); /* Slightly enlarge the hovered area */
+  }
+  
+  .area1 {
+    width: 13vw;
+    height: 11vw;
+    margin-top: 27vw;
+    margin-left: 28vw;
+  }
+  
+  .area2 {
+    width: 5vw;
+    height: 5vw;
+    margin-top: 21vw;
+    margin-left: 38vw;
+  }
+  
+  .area3 {
+    width: 12vw;
+    height: 5vw;
+    margin-top: 38vw;
+    margin-left: 48.5vw;
+  }
+  
+  .area4 {
+    width: 5vw;
+    height: 5vw;
+    margin-top: 71vw;
+    margin-left: 32.5vw;
+  }
+  
+  /* Zoom effects */
+  .zoom-area1 .map-img {
+    transform: scale(2) translate(8vw, 15vh);
+  }
+  
+  .zoom-area2 .map-img {
+    transform: scale(2) translate(5vw, 12vw);
+  }
+  
+  .zoom-area3 .map-img {
+    transform: scale(2) translate(-2vw, 9vh);
+  }
+  
+  .zoom-area4 .map-img {
+    transform: scale(2) translate(8vw, -25vh);
+  }
+  @media only screen and (max-width:1150px){
+    .zoom-area1 .map-img {
+        transform: scale(2) translate(8vw, 15vh);
+      }
+      
+      .zoom-area2 .map-img {
+        transform: scale(2) translate(5vw, 12vw);
+      }
+      
+      .zoom-area3 .map-img {
+        transform: scale(2) translate(-2vw, 7vh);
+      }
+      
+      .zoom-area4 .map-img {
+        transform: scale(2) translate(8vw, -23vh);
+      }
+  }
+  @media only screen and (max-width:1050px){
+    .zoom-area1 .map-img {
+        transform: scale(2) translate(8vw, 15vh);
+      }
+      
+      .zoom-area2 .map-img {
+        transform: scale(2) translate(5vw, 12vw);
+      }
+      
+      .zoom-area3 .map-img {
+        transform: scale(2) translate(-2.5vw, 7vh);
+      }
+      
+      .zoom-area4 .map-img {
+        transform: scale(2) translate(8vw, -22vh);
+      }
+  }
+  @media only screen and (max-width:1000px){
+    .zoom-area1 .map-img {
+        transform: scale(2) translate(8vw, 14vh);
+      }
+      
+      .zoom-area2 .map-img {
+        transform: scale(2) translate(5vw, 12.5vw);
+      }
+      
+      .zoom-area3 .map-img {
+        transform: scale(2) translate(-2.5vw,6vh);
+      }
+      
+      .zoom-area4 .map-img {
+        transform: scale(2) translate(8vw, -20vh);
+      }
+  }
+  @media only screen and (max-width:930px){
+    .zoom-area1 .map-img {
+        transform: scale(2) translate(8vw, 12vh);
+      }
+      
+      .zoom-area2 .map-img {
+        transform: scale(2) translate(5vw, 12.5vw);
+      }
+      
+      .zoom-area3 .map-img {
+        transform: scale(2) translate(-2.5vw,6vh);
+      }
+      
+      .zoom-area4 .map-img {
+        transform: scale(2) translate(8vw, -19vh);
+      }
+  }
+  @media only screen and (max-width:880px){
+    .zoom-area1 .map-img {
+        transform: scale(2) translate(8vw, 12vh);
+      }
+      
+      .zoom-area2 .map-img {
+        transform: scale(2) translate(5vw, 12vw);
+      }
+      
+      .zoom-area3 .map-img {
+        transform: scale(2) translate(-2.5vw,5.5vh);
+      }
+      
+      .zoom-area4 .map-img {
+        transform: scale(2) translate(8vw, -17vh);
+      }
+  }
+  @media only screen and (max-width:800px){
+    .zoom-area1 .map-img {
+        transform: scale(2) translate(8vw, 11vh);
+      }
+      
+      .zoom-area2 .map-img {
+        transform: scale(2) translate(5vw, 12vw);
+      }
+      
+      .zoom-area3 .map-img {
+        transform: scale(2) translate(-2.5vw,5vh);
+      }
+      
+      .zoom-area4 .map-img {
+        transform: scale(2) translate(8vw, -16vh);
+      }
+  }
+  
