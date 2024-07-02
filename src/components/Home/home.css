@@ -1,0 +1,48 @@
+/* src/home.css */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    /* overflow: hidden; */
+}
+
+.map-container {
+    position: relative;
+    width: 100%;
+    height: auto; /* Ensure full viewport height */
+    overflow: hidden; /* Ensure no scrollbars */
+}
+
+/* #map-image {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+} */
+#map-image {
+    display: block;
+    max-width: 100%;
+    max-height: 100%;
+    margin: auto;
+    opacity: 0.3;
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+  }
+  
+  #map-image.fade-in {
+    opacity: 1;
+    transform: scale(1);
+  }
+  
+  #map-image.fade-out {
+    opacity: 0;
+    transform: scale(0);
+  }
+
+#map-image.zoom {
+    transform: scale(1.5);
+}
+
+.map-area {
+    outline: none;
+    z-index: 1;
+    cursor: pointer; /* Ensures cursor changes on hover */
+}
