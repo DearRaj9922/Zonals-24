@@ -6,6 +6,7 @@ import Jaipur from "../src/components/pages/jaipur/jaipur.js";
 import Chandigarh from "../src/components/pages/chandigarh/chandigarh.js";
 import Lucknow from "../src/components/pages/lucknow/lucknow.js";
 import Banglore from "../src/components/pages/banglore/banglore.js";
+import Cards from "../src/components/pages/card/card.js";
 
 const App = () => {
   return (
@@ -16,6 +17,7 @@ const App = () => {
         <Route path="/chandigarh" element={<Chandigarh/>}/>
         <Route path="/lucknow" element={<Lucknow/>}/>
         <Route path="/banglore" element={<Banglore/>}/>
+        <Route path="/card" element={<Cards/>}/>
         
         {/* Add more routes as needed */}
       </Routes>

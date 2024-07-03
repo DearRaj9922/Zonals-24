@@ -40,9 +40,17 @@
     font-family: inter;
     font-size:1.5rem;
 }
+.cards{
+    margin-top: 5vh;
+    display: flex;
+    justify-content: center;
+    gap:3vw;
+    align-items:center ;
+}
 .jaipur-main-mobile{
     display: none;
 }
+
 @media only screen and (max-width:768px){
     .jaipur-main{
         display: none;
