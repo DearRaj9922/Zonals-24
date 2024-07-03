@@ -2,11 +2,15 @@
   0% {
     transform: translateY(100vh);
     opacity: 0;
+    filter:drop-shadow(0 0 30px  rgb(57, 57, 57));
+  }
+  80%{
+    filter:drop-shadow(0 0 30px  rgb(30, 29, 29));
   }
   100% {
     transform: translateY(0);
     opacity: 1;
-    filter:drop-shadow(0 0 20px  rgb(125, 127, 125));
+    filter:drop-shadow(0 0 20px  rgb(170, 172, 170));
   }
 }
 
@@ -90,7 +94,8 @@
 }
 
 .area1:hover, .area2:hover, .area3:hover, .area4:hover {
-  transform: scale(1.5); /* Slightly enlarge the hovered area */
+  transform: scale(1.5); 
+  cursor: pointer;/* Slightly enlarge the hovered area */
 }
 
 .area1 {
@@ -183,6 +188,9 @@
 .thomso-img{
   width:8vw;
 }
+.thomso-img:hover{
+  cursor: pointer;
+}
 .buttons{
   width: 40vw;
   display: flex;
@@ -220,6 +228,7 @@
 }
 .jaipur:hover,.chandigarh:hover,.lucknow:hover,.banglore:hover{
   animation: enlarge 0.5s forwards;
+  cursor: pointer;
 }
 
 @media only screen and (max-width: 1150px) {
