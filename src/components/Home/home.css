@@ -6,7 +6,7 @@
   100% {
     transform: translateY(0);
     opacity: 1;
-    filter:drop-shadow(10px 10px 10px  rgb(70, 71, 70));
+    filter:drop-shadow(0 0 20px  rgb(125, 127, 125));
   }
 }
 
@@ -36,6 +36,17 @@
   100%{
     margin-left: 76vw;
     position: fixed;
+  }
+}
+@keyframes enlarge{
+  0%{
+    /* font-size: 4vw; */
+    transform: scale(1);
+  }
+  100%{
+    /* font-size: 5vw; */
+    transform: scale(1.2)translate(1vw,0);
+    filter:drop-shadow(0 0 20px  rgb(125, 127, 125));
   }
 }
 
@@ -181,6 +192,8 @@
   margin-top: 18vh;
   position: absolute;
 }
+
+
 .buttons.scale-down{
   animation: popRight 2s forwards;
 }
@@ -191,6 +204,22 @@
   border: none;
   /* width:10vw; */
   font-size: 4vw;
+  /* animation: enlarge 1s backwards; */
+}
+.jaipur.enlarged{
+  animation: enlarge 0.5s forwards;
+}
+.chandigarh.enlarged{
+  animation: enlarge 0.5s forwards;
+}
+.lucknow.enlarged{
+  animation: enlarge 0.5s forwards;
+}
+.banglore.enlarged{
+  animation: enlarge 0.5s forwards;
+}
+.jaipur:hover,.chandigarh:hover,.lucknow:hover,.banglore:hover{
+  animation: enlarge 0.5s forwards;
 }
 
 @media only screen and (max-width: 1150px) {
