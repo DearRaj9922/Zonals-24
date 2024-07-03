@@ -1,180 +1,302 @@
-.body {
-    width: 100vw;
+@keyframes popUp {
+  0% {
+    transform: translateY(100vh);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+    filter:drop-shadow(10px 10px 10px  rgb(70, 71, 70));
+  }
+}
+
+@keyframes scaleDown {
+  0% {
+    transform: scale(1) translate(0, 0);
+    top: 0;
+    left: 0;
+    width:100vw;
     height: 100vh;
-    /* overflow: hidden; To prevent scrollbars during zoom */
     position: relative;
-    scrollbar-width: none;
-    -ms-overflow-style: none;
   }
-  .body::-webkit-scrollbar {
-    display: none; /* For Chrome, Safari, and Opera */
+  100% {
+    transform: scale(0.4) translate(90vW, -100vh);
+    /* top: 10px; */
+    /* left: 10px; */
+    width:100vw;
+    height: 100vh;
+    position: fixed;
   }
-  
-  .map-img {
-    width: 100vw;
-    height: auto;
-    z-index: -1;
+}
+@keyframes popRight {
+  0%{
+    margin-left: 100vw;
     position: absolute;
-    transition: transform 0.5s ease-in-out; /* Smooth zoom transition */
   }
-  
-  .area1, .area2, .area3, .area4 {
-    border-radius: 50%;
-    background-color: red;
-    opacity: 0.5;
-    z-index: 1;
-    position: absolute;
-    transition: transform 0.5s ease-in-out; /* Smooth transition for the areas */
+  100%{
+    margin-left: 76vw;
+    position: fixed;
   }
+}
+
+
+.body {
+  user-select: none;
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  overflow: auto;
+  scrollbar-width: none; /* For Firefox */
+  -ms-overflow-style: none; /* For Internet Explorer and Edge */
+  background: radial-gradient(circle, transparent 20%, rgba(0,0,0,0.6) 80%);
   
-  .area1:hover, .area2:hover, .area3:hover, .area4:hover {
-    transform: scale(1.5); /* Slightly enlarge the hovered area */
-  }
+}
+
+.body::-webkit-scrollbar {
+  display: none;
+  width: 0; /* For Chrome, Safari, and Opera */
+}
+
+.body.blur {
+  filter: blur(5px);
+}
+
+.map-img {
+  width: 100vw;
+  height: auto;
+  z-index: -1;
+  position: absolute;
+  transition: transform 0.5s ease-in-out; /* Smooth zoom transition */
+}
+
+.area1, .area2, .area3, .area4 {
+  border-radius: 50%;
+  background-color: red;
+  opacity: 0;
+  z-index: 1;
+  position: absolute;
+  transition: transform 0.5s ease-in-out; /* Smooth transition for the areas */
+}
+
+.area1:hover, .area2:hover, .area3:hover, .area4:hover {
+  transform: scale(1.5); /* Slightly enlarge the hovered area */
+}
+
+.area1 {
+  width: 13vw;
+  height: 11vw;
+  margin-top: 27vw;
+  margin-left: 28vw;
+}
+
+.area2 {
+  width: 5vw;
+  height: 5vw;
+  margin-top: 21vw;
+  margin-left: 38vw;
+}
+
+.area3 {
+  width: 12vw;
+  height: 5vw;
+  margin-top: 38vw;
+  margin-left: 48.5vw;
+}
+
+.area4 {
+  width: 5vw;
+  height: 5vw;
+  margin-top: 71vw;
+  margin-left: 32.5vw;
+}
+
+/* Zoom effects */
+.zoom-area1 .map-img {
+  transform: scale(2) translate(8vw, 17vh);
+}
+
+.zoom-area2 .map-img {
+  transform: scale(2) translate(5vw, 12vw);
+}
+
+.zoom-area3 .map-img {
+  transform: scale(2) translate(-2vw, 9vh);
+}
+
+.zoom-area4 .map-img {
+  transform: scale(2) translate(8vw, -25vh);
+}
+
+.zonalstext {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
   
-  .area1 {
-    width: 13vw;
-    height: 11vw;
-    margin-top: 27vw;
-    margin-left: 28vw;
-  }
+
+}
+.button-section{
+  width: 100vw;
+  height: 100vh;
+  /* background-color: black; */
+  /* opacity: 0.3; */
   
-  .area2 {
-    width: 5vw;
-    height: 5vw;
-    margin-top: 21vw;
-    margin-left: 38vw;
-  }
-  
-  .area3 {
-    width: 12vw;
-    height: 5vw;
-    margin-top: 38vw;
-    margin-left: 48.5vw;
-  }
-  
-  .area4 {
-    width: 5vw;
-    height: 5vw;
-    margin-top: 71vw;
-    margin-left: 32.5vw;
-  }
-  
-  /* Zoom effects */
+}
+
+.zonals-text {
+  width: 60vw;
+  z-index: 2;
+  margin: 0;
+  padding: 0;
+   position:fixed; 
+   
+  /* top:50%; */
+  /* left:50%; */
+  /* transform: translateX(-50%); */
+ 
+  transition: transform 3s ease, top 3s ease, left 3s ease; 
+}
+
+.zonalstext.scale-down {
+  animation: scaleDown 2s forwards;
+}
+.logo-thomso{
+  width:10vw;
+  height:auto;
+  position: fixed;
+  top:25px;
+  left:25px;
+}
+.thomso-img{
+  width:8vw;
+}
+.buttons{
+  width: 40vw;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  margin-left: 76vw;
+  margin-top: 18vh;
+  position: absolute;
+}
+.buttons.scale-down{
+  animation: popRight 2s forwards;
+}
+.jaipur,.chandigarh,.lucknow,.banglore{
+  font-family: Samarkan;
+  color: black;
+  background: transparent;
+  border: none;
+  /* width:10vw; */
+  font-size: 4vw;
+}
+
+@media only screen and (max-width: 1150px) {
   .zoom-area1 .map-img {
     transform: scale(2) translate(8vw, 15vh);
   }
-  
+
   .zoom-area2 .map-img {
     transform: scale(2) translate(5vw, 12vw);
   }
-  
+
   .zoom-area3 .map-img {
-    transform: scale(2) translate(-2vw, 9vh);
+    transform: scale(2) translate(-2vw, 7vh);
   }
-  
+
   .zoom-area4 .map-img {
-    transform: scale(2) translate(8vw, -25vh);
+    transform: scale(2) translate(8vw, -23vh);
   }
-  @media only screen and (max-width:1150px){
-    .zoom-area1 .map-img {
-        transform: scale(2) translate(8vw, 15vh);
-      }
-      
-      .zoom-area2 .map-img {
-        transform: scale(2) translate(5vw, 12vw);
-      }
-      
-      .zoom-area3 .map-img {
-        transform: scale(2) translate(-2vw, 7vh);
-      }
-      
-      .zoom-area4 .map-img {
-        transform: scale(2) translate(8vw, -23vh);
-      }
+}
+
+@media only screen and (max-width: 1050px) {
+  .zoom-area1 .map-img {
+    transform: scale(2) translate(8vw, 15vh);
   }
-  @media only screen and (max-width:1050px){
-    .zoom-area1 .map-img {
-        transform: scale(2) translate(8vw, 15vh);
-      }
-      
-      .zoom-area2 .map-img {
-        transform: scale(2) translate(5vw, 12vw);
-      }
-      
-      .zoom-area3 .map-img {
-        transform: scale(2) translate(-2.5vw, 7vh);
-      }
-      
-      .zoom-area4 .map-img {
-        transform: scale(2) translate(8vw, -22vh);
-      }
+
+  .zoom-area2 .map-img {
+    transform: scale(2) translate(5vw, 12vw);
   }
-  @media only screen and (max-width:1000px){
-    .zoom-area1 .map-img {
-        transform: scale(2) translate(8vw, 14vh);
-      }
-      
-      .zoom-area2 .map-img {
-        transform: scale(2) translate(5vw, 12.5vw);
-      }
-      
-      .zoom-area3 .map-img {
-        transform: scale(2) translate(-2.5vw,6vh);
-      }
-      
-      .zoom-area4 .map-img {
-        transform: scale(2) translate(8vw, -20vh);
-      }
+
+  .zoom-area3 .map-img {
+    transform: scale(2) translate(-2.5vw, 7vh);
   }
-  @media only screen and (max-width:930px){
-    .zoom-area1 .map-img {
-        transform: scale(2) translate(8vw, 12vh);
-      }
-      
-      .zoom-area2 .map-img {
-        transform: scale(2) translate(5vw, 12.5vw);
-      }
-      
-      .zoom-area3 .map-img {
-        transform: scale(2) translate(-2.5vw,6vh);
-      }
-      
-      .zoom-area4 .map-img {
-        transform: scale(2) translate(8vw, -19vh);
-      }
+
+  .zoom-area4 .map-img {
+    transform: scale(2) translate(8vw, -22vh);
   }
-  @media only screen and (max-width:880px){
-    .zoom-area1 .map-img {
-        transform: scale(2) translate(8vw, 12vh);
-      }
-      
-      .zoom-area2 .map-img {
-        transform: scale(2) translate(5vw, 12vw);
-      }
-      
-      .zoom-area3 .map-img {
-        transform: scale(2) translate(-2.5vw,5.5vh);
-      }
-      
-      .zoom-area4 .map-img {
-        transform: scale(2) translate(8vw, -17vh);
-      }
+}
+
+@media only screen and (max-width: 1000px) {
+  .zoom-area1 .map-img {
+    transform: scale(2) translate(8vw, 14vh);
   }
-  @media only screen and (max-width:800px){
-    .zoom-area1 .map-img {
-        transform: scale(2) translate(8vw, 11vh);
-      }
-      
-      .zoom-area2 .map-img {
-        transform: scale(2) translate(5vw, 12vw);
-      }
-      
-      .zoom-area3 .map-img {
-        transform: scale(2) translate(-2.5vw,5vh);
-      }
-      
-      .zoom-area4 .map-img {
-        transform: scale(2) translate(8vw, -16vh);
-      }
+
+  .zoom-area2 .map-img {
+    transform: scale(2) translate(5vw, 12.5vw);
   }
-  
+
+  .zoom-area3 .map-img {
+    transform: scale(2) translate(-2.5vw, 6vh);
+  }
+
+  .zoom-area4 .map-img {
+    transform: scale(2) translate(8vw, -20vh);
+  }
+}
+
+@media only screen and (max-width: 930px) {
+  .zoom-area1 .map-img {
+    transform: scale(2) translate(8vw, 12vh);
+  }
+
+  .zoom-area2 .map-img {
+    transform: scale(2) translate(5vw, 12.5vw);
+  }
+
+  .zoom-area3 .map-img {
+    transform: scale(2) translate(-2.5vw, 6vh);
+  }
+
+  .zoom-area4 .map-img {
+    transform: scale(2) translate(8vw, -19vh);
+  }
+}
+
+@media only screen and (max-width: 880px) {
+  .zoom-area1 .map-img {
+    transform: scale(2) translate(8vw, 12vh);
+  }
+
+  .zoom-area2 .map-img {
+    transform: scale(2) translate(5vw, 12vw);
+  }
+
+  .zoom-area3 .map-img {
+    transform: scale(2) translate(-2.5vw, 5.5vh);
+  }
+
+  .zoom-area4 .map-img {
+    transform: scale(2) translate(8vw, -17vh);
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .zoom-area1 .map-img {
+    transform: scale(2) translate(8vw, 11vh);
+  }
+
+  .zoom-area2 .map-img {
+    transform: scale(2) translate(5vw, 12vw);
+  }
+
+  .zoom-area3 .map-img {
+    transform: scale(2) translate(-2.5vw, 5vh);
+  }
+
+  .zoom-area4 .map-img {
+    transform: scale(2) translate(8vw, -16vh);
+  }
+}
