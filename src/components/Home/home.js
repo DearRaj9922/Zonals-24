@@ -121,7 +121,7 @@ const navigate=useNavigate();
       </div>
       <div className="button-section">
         <div className="logo-thomso">
-          <img src={thomsologo} className="thomso-img" alt="tho-logo" />
+          <img src={thomsologo} onClick={()=>navigate('/')} className="thomso-img" alt="tho-logo" />
         </div>
         <div className={`zonalstext ${animate ? "scale-down" : ""}`}>
           <img
@@ -136,7 +136,7 @@ const navigate=useNavigate();
             className={`jaipur ${jaipurButtonHovered ? "enlarged" : ""}`}
             // onMouseEnter={handleJaipurHover}
             // onMouseLeave={handleJaipurLeave}
-            onClick={()=>window.open('/jaipur','_blank')}
+            onClick={()=>window.open('/jaipur')}
           >
             Jaipur
           </button>
@@ -146,7 +146,7 @@ const navigate=useNavigate();
             }`}
             // onMouseEnter={handleChandigarhHover}
             // onMouseLeave={handleChandigarhLeave}
-            onClick={()=>window.open('/chandigarh','_blank')}
+            onClick={()=>window.open('/chandigarh')}
           >
             Chandigarh
           </button>
@@ -154,7 +154,7 @@ const navigate=useNavigate();
             className={`lucknow ${lucknowButtonHovered ? "enlarged" : ""}`}
             // onMouseEnter={handleLucknowHover}
             // onMouseLeave={handleLucknowLeave}
-            onClick={()=>window.open('/lucknow','_blank')}
+            onClick={()=>window.open('/lucknow')}
           >
             Lucknow
           </button>
@@ -162,7 +162,7 @@ const navigate=useNavigate();
             className={`banglore ${bangloreButtonHovered ? "enlarged" : ""}`}
             // onMouseEnter={handleBangloreHover}
             // onMouseLeave={handleBangloreLeave}
-            onClick={()=>window.open('/banglore','_blank')}
+            onClick={()=>window.open('/banglore')}
           >
             Banglore
           </button>
