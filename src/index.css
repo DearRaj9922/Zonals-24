@@ -11,3 +11,10 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+@font-face {
+  font-family: 'Samarkan';
+  src:url('../public/Samarkan/SAMARN__.TTF') format('truetype'); /* Add other formats if available */
+  /* Optionally specify font-weight and font-style */
+  font-weight: normal;
+  font-style: normal;
+}
