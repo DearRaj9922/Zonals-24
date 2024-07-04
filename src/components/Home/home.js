@@ -96,25 +96,25 @@ const navigate=useNavigate();
       <div className="area">
         <div
           className="area1"
-          onClick={()=>window.open('/jaipur','_blank')}
+          onClick={()=>navigate('/jaipur','_blank')}
           onMouseEnter={() => handleMouseEnter("zoom-area1")}
           onMouseLeave={() => handleMouseLeave("zoom-area1")}
         ></div>
         <div
           className="area2"
-          onClick={()=>window.open('/chandigarh','_blank')}
+          onClick={()=>navigate('/chandigarh','_blank')}
           onMouseEnter={() => handleMouseEnter("zoom-area2")}
           onMouseLeave={() => handleMouseLeave("zoom-area2")}
         ></div>
         <div
           className="area3"
-          onClick={()=>window.open('/lucknow','_blank')}
+          onClick={()=>navigate('/lucknow','_blank')}
           onMouseEnter={() => handleMouseEnter("zoom-area3")}
           onMouseLeave={() => handleMouseLeave("zoom-area3")}
         ></div>
         <div
           className="area4"
-          onClick={()=>window.open('/banglore','_blank')}
+          onClick={()=>navigate('/banglore','_blank')}
           onMouseEnter={() => handleMouseEnter("zoom-area4")}
           onMouseLeave={() => handleMouseLeave("zoom-area4")}
         ></div>
@@ -136,7 +136,7 @@ const navigate=useNavigate();
             className={`jaipur ${jaipurButtonHovered ? "enlarged" : ""}`}
             // onMouseEnter={handleJaipurHover}
             // onMouseLeave={handleJaipurLeave}
-            onClick={()=>window.open('/jaipur')}
+            onClick={()=>navigate('/jaipur')}
           >
             Jaipur
           </button>
@@ -146,7 +146,7 @@ const navigate=useNavigate();
             }`}
             // onMouseEnter={handleChandigarhHover}
             // onMouseLeave={handleChandigarhLeave}
-            onClick={()=>window.open('/chandigarh')}
+            onClick={()=>navigate('/chandigarh')}
           >
             Chandigarh
           </button>
@@ -154,7 +154,7 @@ const navigate=useNavigate();
             className={`lucknow ${lucknowButtonHovered ? "enlarged" : ""}`}
             // onMouseEnter={handleLucknowHover}
             // onMouseLeave={handleLucknowLeave}
-            onClick={()=>window.open('/lucknow')}
+            onClick={()=>navigate('/lucknow')}
           >
             Lucknow
           </button>
@@ -162,7 +162,7 @@ const navigate=useNavigate();
             className={`banglore ${bangloreButtonHovered ? "enlarged" : ""}`}
             // onMouseEnter={handleBangloreHover}
             // onMouseLeave={handleBangloreLeave}
-            onClick={()=>window.open('/banglore')}
+            onClick={()=>navigate('/banglore')}
           >
             Banglore
           </button>

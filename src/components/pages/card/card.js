@@ -44,7 +44,7 @@ export default function Card(props) {
       <div className={`card ${isHovered ? 'hovered' : ''}`}>
         <div className="front">
           <img src={props.background} alt="card" className="card-bg" />
-          <div className="contents">
+          <div className="contents" style={{color:props.fontColor}}>
             <div className="event-name">{props.name}</div>
             <div className="event-discr">{props.description}</div>
             <div className="event-img-div">
@@ -56,8 +56,8 @@ export default function Card(props) {
         <div className="back">
           <img src={props.background} alt="card" className="card-bg" />
           <div className="buttons-div">
-            <button className="btn-1" onClick={() => window.open(props.registerLink, '_blank')}>Register</button>
-            <button className="btn-2" onClick={() => window.open(props.rulebookLink, '_blank')}>RuleBook</button>
+            <button style={{border:`3px solid ${props.fontColor}`,color:props.fontColor }} className="btn-1" onClick={() => window.open(props.registerLink, '_blank')}>Register</button>
+            <button style={{border:`3px solid ${props.fontColor}`,color:props.fontColor }} className="btn-2" onClick={() => window.open(props.rulebookLink, '_blank')}>RuleBook</button>
           </div>
         </div>
       </div>

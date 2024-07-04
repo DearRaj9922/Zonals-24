@@ -6,7 +6,7 @@
 
 .card {
     width: 14vw;
-    height: 35vh;
+    height: 18vw;
     position: relative;
     transform-style: preserve-3d;
     transition: transform 0.6s;
@@ -52,7 +52,7 @@
     padding-top: 2vh;
     padding-bottom: 2vh;
     font-family: Salsa;
-    color: #323232;
+    /* color: #323232; */
 }
 
 .event-img-div {
@@ -86,7 +86,7 @@
     font-family: Salsa;
     color: #323232;
     background: transparent;
-    border: 3px solid #323232;
+    border: 3px ;
     border-radius: 5px;
     width: 8vw;
     font-size: 1.7vw;
@@ -97,3 +97,88 @@
     color: white;
     background-color: #323232;
 }
+.card-container-mobile{
+    display:none;
+}
+.mobcard{
+    margin-top: 0;
+    width:100vw;
+    height:52vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    /* margin-bottom: -25vh; */
+
+}
+/* .mob-card{
+    width:80vw;
+    display: flex;
+    justify-content: center;
+} */
+.card-bg-mob{
+    width:80vw;
+    /* height:60vh; */
+    z-index: -1;
+    position: absolute;
+    /* margin-bottom: -25vh; */
+}
+.contents-mob{
+    margin-bottom: 3vh;
+    width:80vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: Salsa;
+}
+.event-img-div-mob{
+    width:30vw;
+}
+.event-img-mob{
+    width:30vw;
+    /* height:30vh; */
+}
+.title-desc{
+    width:70vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    padding: 0 5vw 0 5vw;
+}
+.event-name-mob{
+    font-size: 5vw;
+}
+.event-discr-mob{
+    font-size:3vw;
+}
+.buttons-div-mob{
+    width:70vw;
+    display: flex;
+    justify-content: space-between;
+    padding:0 6vw 7px 5vw;
+    margin-top: 1.5vh;
+}
+.btn-1-mob,.btn-2-mob{
+    width:30vw;
+    height: 6vh;
+    font-family: Salsa;
+    font-size: 3.5vw;
+    border-radius: 5px;
+    border-width: 3px;
+    background: transparent;
+}
+.btn-1-mob:hover,.btn-2-mob:hover{
+    background-color: #323232;
+    color: white;
+}
+
+/* @media only screen and(max-width:768px){
+    .mob-card{
+        width:50vw;
+    }
+    .card-bg-mob{
+        width:50vw;
+    }
+} */

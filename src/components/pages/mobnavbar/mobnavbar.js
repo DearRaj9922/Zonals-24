@@ -24,10 +24,10 @@ export default function Mobnavbar() {
     </div>
     <div id="sideNav" className={isOpen ? 'visible' : 'hidden'}>
         <ul className='states'>
-            <li onClick={()=>window.open('/jaipur')}>Jaipur</li>
-            <li onClick={()=>window.open('/chandigarh')}>Chandigarh</li>
-            <li onClick={()=>window.open('/lucknow')}>Lucknow</li>
-            <li onClick={()=>window.open('/banglore')}>Banglore</li>
+            <li onClick={()=>navigate('/jaipur')}>Jaipur</li>
+            <li onClick={()=>navigate('/chandigarh')}>Chandigarh</li>
+            <li onClick={()=>navigate('/lucknow')}>Lucknow</li>
+            <li onClick={()=>navigate('/banglore')}>Banglore</li>
         </ul>
     </div>
     </>

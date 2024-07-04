@@ -20,7 +20,7 @@
     cursor: pointer;
 }
 .textdiv-jaipur{
-    margin-top: 12vh;
+    margin-top: 15vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -41,7 +41,7 @@
     font-size:1.5rem;
 }
 .cards{
-    margin-top: 5vh;
+    margin-top: 8vh;
     display: flex;
     justify-content: center;
     gap:3vw;
@@ -50,6 +50,18 @@
 .jaipur-main-mobile{
     display: none;
 }
+@media only screen and (max-width:1030px){
+    .cards{
+        margin-top: 10vh;
+
+    }
+    .jaipur-title{
+        font-size: 8vw;
+    }
+    .textdiv-jaipur{
+        margin-top:20vh;
+    }
+}
 
 @media only screen and (max-width:768px){
     .jaipur-main{
@@ -57,18 +69,30 @@
     }
     .jaipur-main-mobile{
         display: block;
-        position: fixed;
+        overflow: scroll;
     }
     .textdiv{
         margin-top: 20vh;
         margin-left:10vw;
         justify-content: start;
         align-items: start;
+        margin-bottom: 2rem;
+
+    }
+    .textdiv h3{
+        font-family: Salsa;
     }
     .jaipur-title{
         font-size:10vw
     }
     .venue{
         font-size:5vw
+    }
+    .cards{
+        display: flex;
+        flex-direction: column;
+        margin-top:3rem;
+        gap:5rem;
+        margin-bottom: 5rem;
     }
 }
