@@ -69,9 +69,10 @@
 
 .event-discr {
     width:8vw;
-    font-size: 0.9vw;
+    font-size: 0.8vw;
     display: flex;
     justify-content: center;
+    text-align: center;
 }
 
 .event-date {
@@ -152,6 +153,7 @@
 }
 .event-discr-mob{
     font-size:3vw;
+    
 }
 .buttons-div-mob{
     width:70vw;
@@ -162,7 +164,7 @@
 }
 .btn-1-mob,.btn-2-mob{
     width:30vw;
-    height: 6vh;
+    height: 5vh;
     font-family: Salsa;
     font-size: 3.5vw;
     border-radius: 5px;

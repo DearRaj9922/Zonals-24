@@ -44,8 +44,8 @@
     margin-top: 8vh;
     display: flex;
     justify-content: center;
+    align-items: center;
     gap:3vw;
-    align-items:center ;
 }
 .jaipur-main-mobile{
     display: none;
