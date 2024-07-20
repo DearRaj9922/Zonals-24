@@ -1,0 +1,140 @@
+.footerBox {
+  width: 100%;
+  background: #000; /* Previous background color */
+  height: 72px;
+  position: fixed;
+  bottom: 0;
+  transition: transform 1s ease-in-out;
+  transform: translateY(0%);
+  opacity: .4;
+}
+
+.footerBoxB {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 300px;
+  background: #000; /* Previous background color */
+  transform: translateY(-10%);
+  display: flex;
+  justify-content: center; /* Center the content */
+  align-items: center; /* Center the content */
+  display: flex;
+  flex-direction: column;
+  opacity: .4;
+}
+
+.footerBoxA {
+  position: relative;
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1% 2% 2% 2%;
+  background: #000; /* Previous background color */
+}
+
+.footerButton {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.footerSub1 button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.open {
+  transition: transform 1s ease-in-out;
+  transform: translateY(-120%);
+}
+
+.close {
+  transition: transform 1s ease-in-out;
+  transform: translateY(0%);
+}
+
+.footerBoxBSub1 {
+  gap: 30px;
+  display: flex;
+  flex-direction: column;
+  width: 50vw;
+  color: #FFF;
+}
+
+.navbarWrapper {
+  background: #323232; /* Wrapper with gray background */
+  /* width: 100%; Ensure it takes full width */
+  border-radius: 5px;
+  padding: 14px 36px 14px 36px; /* Adjust padding as needed */
+  display: flex; /* Use flexbox to center content */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+}
+
+.navbar-nav {
+  display: flex;
+  justify-content: center; /* Center the links horizontally */
+  align-items: center; /* Center the links vertically */
+  list-style-type: none; /* Remove default list styling */
+  padding-left: 0; /* Remove default padding */
+  margin: 0; /* Remove default margin */
+  gap: 3vw; /* Adjust gap as needed */
+}
+
+.nav-item {
+  position: relative; /* Necessary for the hover effect */
+}
+
+.nav-link {
+  text-decoration: none; /* Remove underline from links */
+  font-family: salsa;
+  color: inherit; /* Inherit color from parent */
+  padding: 10px 15px; /* Add padding to the links */
+  transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effect */
+}
+
+.nav-link:hover {
+  background-color: #FFFFFF; /* White background on hover */
+  opacity: .6;
+  border-radius: 5px;
+  color: #ED6B65; /* Change text color to black on hover */
+}
+
+@media only screen and (max-width: 1150px) {
+  .footerBoxB {
+    gap: 0vw;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .footerBoxB {
+    /* padding-left: 20px; */
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .footerBoxB {
+    padding-left: 20px;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .footerBox {
+    display: none;
+  }
+  
+}
+.footerBoxSub5{
+  /* border: 2px solid red; */
+  display: flex;
+  font-family: salsa;
+  color: white;
+  position: absolute;
+  padding: 2px 30px;
+ font-size: 35px;
+ margin: 0% 5% 13% 0%;
+  
+}
