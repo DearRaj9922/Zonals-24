@@ -34,12 +34,18 @@ import "./card.css";
 
 export default function Card(props) {
   const [isHovered, setIsHovered] = useState(false);
+  const [colorhover, setColor] = useState(props.fontColor)
+  
 
   return (
     <div
       className="card-container"
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
+      onMouseEnter={() => {
+        setIsHovered(true)
+      }
+    }
+      onMouseLeave={() => {
+        setIsHovered(false)}}
     >
       <div className={`card ${isHovered ? 'hovered' : ''}`}>
         <div className="front">
@@ -56,8 +62,8 @@ export default function Card(props) {
         <div className="back">
           <img src={props.background} alt="card" className="card-bg" />
           <div className="buttons-div">
-            <button style={{border:`3px solid ${props.fontColor}`,color:props.fontColor }} className="btn-1" onClick={() => window.open(props.registerLink, '_blank')}>Register</button>
-            <button style={{border:`3px solid ${props.fontColor}`,color:props.fontColor }} className="btn-2" onClick={() => window.open(props.rulebookLink, '_blank')}>RuleBook</button>
+            <button style={{border:`3px solid ${colorhover}`,color:{colorhover}}} className="btn-1" onClick={() => window.open(props.registerLink, '_blank')}>Register</button>
+            <button style={{border:`3px solid ${colorhover}`,color:{colorhover} }} className="btn-2" onClick={() => window.open(props.rulebookLink, '_blank')}>RuleBook</button>
           </div>
         </div>
       </div>

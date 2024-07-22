@@ -14,7 +14,7 @@ import linkedinLite from './Footer Images/linkedinLite.svg';
 import youtube from './Footer Images/youtube.svg';
 import youtubeLite from './Footer Images/youtubeLite.svg';
 
-const Footer = () => {
+const Footer = (props) => {
   const [clicked, setClicked] = useState(true);
   const [change1, setChange1] = useState(true);
   const [change2, setChange2] = useState(true);
@@ -73,7 +73,7 @@ const Footer = () => {
             <div className="navbarWrapper">
               <ul className="navbar-nav">
                 <li className="nav-item">
-                  <a className="nav-link" href="#">Lucknow</a>
+                  <a className="nav-link" style={{backgroundColor:props.bgcolor}} href="#">Lucknow</a>
                 </li>
                 <li className="nav-item">
                   <a className="nav-link" href="#">Jaipur</a>

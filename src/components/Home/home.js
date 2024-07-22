@@ -96,25 +96,25 @@ const navigate=useNavigate();
       <div className="area">
         <div
           className="area1"
-          onClick={()=>navigate('/jaipur','_blank')}
+          onClick={()=>window.open('/jaipur','_blank')}
           onMouseEnter={() => handleMouseEnter("zoom-area1")}
           onMouseLeave={() => handleMouseLeave("zoom-area1")}
         ></div>
         <div
           className="area2"
-          onClick={()=>navigate('/chandigarh','_blank')}
+          onClick={()=>window.open('/chandigarh','_blank')}
           onMouseEnter={() => handleMouseEnter("zoom-area2")}
           onMouseLeave={() => handleMouseLeave("zoom-area2")}
         ></div>
         <div
           className="area3"
-          onClick={()=>navigate('/lucknow','_blank')}
+          onClick={()=>window.open('/lucknow','_blank')}
           onMouseEnter={() => handleMouseEnter("zoom-area3")}
           onMouseLeave={() => handleMouseLeave("zoom-area3")}
         ></div>
         <div
           className="area4"
-          onClick={()=>navigate('/banglore','_blank')}
+          onClick={()=>window.open('/banglore','_blank')}
           onMouseEnter={() => handleMouseEnter("zoom-area4")}
           onMouseLeave={() => handleMouseLeave("zoom-area4")}
         ></div>
