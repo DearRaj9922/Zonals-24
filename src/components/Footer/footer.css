@@ -21,7 +21,7 @@
   align-items: center; /* Center the content */
   display: flex;
   flex-direction: column;
-  opacity: .4;
+  opacity: 1;
 }
 
 .footerBoxA {
@@ -62,6 +62,7 @@
   flex-direction: column;
   width: 50vw;
   color: #FFF;
+ 
 }
 
 .navbarWrapper {
@@ -96,12 +97,12 @@
   transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effect */
 }
 
-.nav-link:hover {
-  background-color: #FFFFFF; /* White background on hover */
+/* .nav-link:hover {
+  background-color: #FFFFFF;
   opacity: .6;
   border-radius: 5px;
-  color: #ED6B65; /* Change text color to black on hover */
-}
+  color: #ED6B65; 
+} */
 
 @media only screen and (max-width: 1150px) {
   .footerBoxB {
