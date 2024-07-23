@@ -1,12 +1,12 @@
 .footerBox {
   width: 100%;
-  background: #000; /* Previous background color */
+  background: transparent; /* Previous background color */
   height: 8vh;
   position: fixed;
   bottom: 0;
   transition: transform 1s ease-in-out;
   transform: translateY(10%);
-  opacity: .4;
+  /* opacity: 1; */
 }
 
 .footerBoxB {
@@ -32,7 +32,8 @@
   align-items: center;
   justify-content: space-between;
   padding: 0 2% 0 2%;
-  background: #000; /* Previous background color */
+  background: #000; 
+  opacity: 0.4;/* Previous background color */
 }
 
 .footerButton {
@@ -49,7 +50,7 @@
 
 .open {
   transition: transform 1s ease-in-out;
-  transform: translateY(-110%);
+  transform: translateY(-100%);
 }
 
 .close {
