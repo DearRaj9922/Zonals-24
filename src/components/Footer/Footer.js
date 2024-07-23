@@ -15,6 +15,7 @@ import youtube from './Footer Images/youtube.svg';
 import youtubeLite from './Footer Images/youtubeLite.svg';
 import { Link ,useLocation} from 'react-router-dom';
 
+
 const Footer = () => {
 
 const location=useLocation();
@@ -83,10 +84,11 @@ const location=useLocation();
             <div className="navbarWrapper">
               <ul className="navbar-nav">
                 <li className="nav-item">
+
                   <Link className="nav-link" style={location.pathname==="/lucknow"?style2:style3} to="/lucknow">Lucknow</Link>
                   
                   
-                  
+            
                 </li>
                 <li className="nav-item">
                   {/* <a className="nav-link" href="#">Jaipur</a> */}
