@@ -1,11 +1,11 @@
 .footerBox {
   width: 100%;
   background: #000; /* Previous background color */
-  height: 72px;
+  height: 8vh;
   position: fixed;
   bottom: 0;
   transition: transform 1s ease-in-out;
-  transform: translateY(0%);
+  transform: translateY(10%);
   opacity: .4;
 }
 
@@ -21,16 +21,17 @@
   align-items: center; /* Center the content */
   display: flex;
   flex-direction: column;
-  opacity: .4;
+  opacity: 1;
 }
 
 .footerBoxA {
+  height:8vh;
   position: relative;
   z-index: 20;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1% 2% 2% 2%;
+  padding: 0 2% 0 2%;
   background: #000; /* Previous background color */
 }
 
@@ -48,12 +49,12 @@
 
 .open {
   transition: transform 1s ease-in-out;
-  transform: translateY(-120%);
+  transform: translateY(-110%);
 }
 
 .close {
   transition: transform 1s ease-in-out;
-  transform: translateY(0%);
+  transform: translateY(15%);
 }
 
 .footerBoxBSub1 {
@@ -62,6 +63,7 @@
   flex-direction: column;
   width: 50vw;
   color: #FFF;
+ 
 }
 
 .navbarWrapper {
@@ -96,12 +98,12 @@
   transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effect */
 }
 
-.nav-link:hover {
-  background-color: #FFFFFF; /* White background on hover */
+/* .nav-link:hover {
+  background-color: #FFFFFF;
   opacity: .6;
   border-radius: 5px;
-  color: #ED6B65; /* Change text color to black on hover */
-}
+  color: #ED6B65; 
+} */
 
 @media only screen and (max-width: 1150px) {
   .footerBoxB {

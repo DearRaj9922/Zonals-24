@@ -1,7 +1,7 @@
 import React from 'react'
 import jaipurgarhbg from "../../../assets/jaipurbg.webp"
 import "./jaipur.css";
-import logoBlack from "../../../assets/logoblack.png";
+import logoBlack from "../../../assets/logoblack.svg";
 import jaipurbgmobile from "../../../assets/jaipurbgmobile.webp";
 import MobNavbar from "../mobnavbar/mobnavbar.js";
 import { useNavigate } from 'react-router-dom';
@@ -14,6 +14,7 @@ import image5 from "../../../assets/tgt-dance.webp";
 import Card from "../card/card.js";
 import Mobcard from '../card/mobcard.js';
 import cardmobbg from "../../../assets/cardmobilebg.webp";
+import Footer from "../../../components/Footer/Footer.js";
 
 export default function Jaipurgarh() {
   const navigate = useNavigate();
@@ -112,6 +113,7 @@ export default function Jaipurgarh() {
             );
           })}
         </div>
+        <Footer/> 
       </div>
       <div className="jaipur-main-mobile">
         <MobNavbar />

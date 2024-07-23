@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './footer.css';
 import UpArrow from '../Footer/Footer Images/uparrow.svg';
 import DownArrow from '../Footer/Footer Images/downarrow.svg';
-import Logo from './Footer Images/Logo.svg';
+// import Logo from './Footer Images/Logo.svg';
 import facebook from './Footer Images/facebook.svg';
 import facebookLite from './Footer Images/facebookLite.svg';
 import insta from './Footer Images/insta.svg';
@@ -13,8 +13,13 @@ import linkedin from './Footer Images/linkedin.svg';
 import linkedinLite from './Footer Images/linkedinLite.svg';
 import youtube from './Footer Images/youtube.svg';
 import youtubeLite from './Footer Images/youtubeLite.svg';
+import { Link ,useLocation} from 'react-router-dom';
 
-const Footer = (props) => {
+
+const Footer = () => {
+
+const location=useLocation();
+
   const [clicked, setClicked] = useState(true);
   const [change1, setChange1] = useState(true);
   const [change2, setChange2] = useState(true);
@@ -31,6 +36,12 @@ const Footer = (props) => {
   const handleMouseLeave = (setChange) => () => {
     setChange(true);
   };
+  const style2={
+    backgroundColor:"#D6D6D6",
+    color:"#AB4C00",
+    borderRadius:"5px"
+  };
+  const style3={};
 
   return (
     <div>
@@ -73,16 +84,24 @@ const Footer = (props) => {
             <div className="navbarWrapper">
               <ul className="navbar-nav">
                 <li className="nav-item">
-                  <a className="nav-link" style={{backgroundColor:props.bgcolor}} href="#">Lucknow</a>
+
+                  <Link className="nav-link" style={location.pathname==="/lucknow"?style2:style3} to="/lucknow">Lucknow</Link>
+                  
+                  
+            
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="#">Jaipur</a>
+                  {/* <a className="nav-link" href="#">Jaipur</a> */}
+                  <Link className="nav-link" style={location.pathname==="/jaipur"?style2:style3} to="/jaipur">Jaipur</Link>
+                  
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="#">Chandigarh</a>
+                  {/* <a className="nav-link" href="#">Chandigarh</a> */}
+                  <Link className="nav-link" style={location.pathname==="/chandigarh"?style2:style3} to="/chandigarh">Chandigarh</Link>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="#">Bangalore</a>
+                  {/* <a className="nav-link" href="#">Bangalore</a> */}
+                  <Link className="nav-link" style={location.pathname==="/banglore"?style2:style3} to="/banglore">Banglore</Link>
                 </li>
               </ul>
             </div>

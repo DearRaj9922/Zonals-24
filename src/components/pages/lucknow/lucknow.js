@@ -1,7 +1,7 @@
 import React from 'react'
 import luckbg from "../../../assets/lucknow.webp"
 import "./lucknow.css";
-import logoBlack from "../../../assets/logoblack.png";
+import logoBlack from "../../../assets/logoblack.svg";
 import luckbgmobile from "../../../assets/lucknowmobile.webp";
 import MobNavbar from "../mobnavbar/mobnavbar.js";
 import { useNavigate } from 'react-router-dom';
@@ -14,6 +14,7 @@ import image2 from "../../../assets/mrthomso.webp";
 import image3 from "../../../assets/tgt-singing.webp";
 import image4 from "../../../assets/open-mic.webp";
 import image5 from "../../../assets/tgt-dance.webp";
+import Footer from "../../../components/Footer/Footer.js";
 
 export default function Lucknow() {
   const navigate=useNavigate();
@@ -111,7 +112,7 @@ export default function Lucknow() {
             );
           })}
         </div>
-      
+        <Footer/> 
     </div>
     <div className="luck-main-mobile">
       <MobNavbar/>
