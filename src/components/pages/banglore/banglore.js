@@ -15,7 +15,6 @@ import image3 from "../../../assets/tgt-singing.webp";
 import image4 from "../../../assets/open-mic.webp";
 import image5 from "../../../assets/tgt-dance.webp";
 import Footer from "../../../components/Footer/Footer.js";
-import RegisterForm from '../../RegisterForm/registerform.js';
 
 export default function Banglore() {
   const navigate=useNavigate();
@@ -77,7 +76,7 @@ export default function Banglore() {
         <h1 className='bang-title'>Banglore</h1>
         <h3 className='venue-bang'>Venue:Lorem, ipsum dolor.</h3>
       </div>
-      {/* <div className="cards-bang">
+      <div className="cards-bang">
           {details.map((el) => {
             var style1 = { marginTop: "0px" };
             if (el.number === 1 || el.number === 5) {
@@ -112,8 +111,7 @@ export default function Banglore() {
               </div>
             );
           })}
-        </div> */}
-      <RegisterForm />
+        </div>
       
       <Footer/> 
     </div>
