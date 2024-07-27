@@ -50,3 +50,13 @@
 .input5 { grid-area: 3 / 1 / 4 / 3; }
 .input6 { grid-area: 4 / 1 / 5 / 2; }
 .input7 { grid-area: 4 / 2 / 5 / 3; }
+
+.reg-submit-button {
+    margin-left: auto;
+    padding: 10px 32px;
+    font-size: 16px;
+    border: 0;
+    background-color: maroon;
+    color: white;
+    border-radius: 3px;
+}
