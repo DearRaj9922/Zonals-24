@@ -69,7 +69,7 @@ export default function Jaipurgarh() {
   return (
     <>
       <div className='jaipur-main'>
-        <img src={jaipurgarhbg} className='jaipur-bg' alt='jaipurgarh-bg' />
+        <img src={jaipurgarhbg} className='jaipur-bg' alt='jaipur-bg' />
         <div className="logo-div">
           <img src={logoBlack} onClick={() => navigate('/')} className='logo' alt="logo-black" />
         </div>
@@ -106,7 +106,7 @@ export default function Jaipurgarh() {
                     fontColor={el.color}
                     hoverColor={"#fffff"}
                     background={cardbg}
-                    registerLink={"#"}
+                    registerLink={`/jaipur/registration/${el.number}`}
                     rulebookLink={el.href} />
                 </div>
               </div>

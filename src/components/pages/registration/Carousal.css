@@ -1,0 +1,58 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.Cbox{
+    display: flex;
+    justify-content: space-evenly;
+    height: 40%;
+    margin-top: 5px;
+}
+
+.carousal{
+     /* display: flex; */
+     width: auto;
+     padding: 1vh 1.5vw;
+}
+
+.fwArrow{
+    position: absolute;
+    top: 90px;
+    right: -10px;
+    cursor: pointer;
+}
+
+.bkArrow{
+    position: absolute;
+    top: 90px;
+    left: -10px;
+    z-index: 20;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 460px) {
+    .Cbox{
+        height: 111px;
+        width: fit-content;
+        margin-top: 4px;
+    }
+    .slick-slide img {
+        display: block;
+        width: 68px;
+        margin-left: 0px;
+
+    }
+    .carousal{
+       margin-left: 9px;
+   }
+   .fwArrow{
+    top: 30px;
+    right: -15px;
+}
+.bkArrow{
+    top: 30px;
+    left: -25px;
+}
+}

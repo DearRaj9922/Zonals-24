@@ -105,7 +105,7 @@ export default function Lucknow() {
                     fontColor={el.color}
                     hoverColor={"#fffff"}
                     background={cardbg}
-                    registerLink={"#"}
+                    registerLink={`/lucknow/registration/${el.number}`}
                     rulebookLink={el.href} />
                 </div>
               </div>

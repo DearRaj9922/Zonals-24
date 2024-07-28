@@ -51,9 +51,9 @@ const cards = [
     },
 ]
 
-const RegisterForm = () => {
+const RegisterForm = (props) => {
     return (
-        <form className='reg-wrapper'>
+        <form className='reg-wrapper' style={{borderColor:`${props.formborder}`}}>
             <div className="reg-events">
               {cards.map((el) => {
                 var style1 = { marginTop: "0px" };
@@ -67,8 +67,8 @@ const RegisterForm = () => {
                       <FormCard
                         name={el.title}
                         image={el.img}
-                        fontColor={el.color}
-                        background={cardbg}
+                        fontColor={props.font}
+                        background={props.cardbg}
                         registerLink={"#"}
                         rulebookLink={el.href} />
                     </div>
@@ -101,7 +101,7 @@ const RegisterForm = () => {
                 <input type="text" className="form-input input6" placeholder='Branch*' />
                 <input type="text" className="form-input input7" placeholder='Year*' />
             </div>
-            <button className='reg-submit-button' type='submit'>Submit</button>
+            <button className='reg-submit-button' type='submit' style={{backgroundColor:`${props.submit}`}}>Submit</button>
         </form>
     );
 }
