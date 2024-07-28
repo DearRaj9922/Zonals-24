@@ -3,7 +3,7 @@ import './formCard.css';
 
 const FormCard = (props) => {
     const [isHovered, setIsHovered] = useState(false);
-    const [isChecked, setIsChecked] = useState(false);
+    const [isChecked, setIsChecked] = useState(props.checked);
 
     const handleCardClick = () => {
         setIsChecked(prevState => !prevState);
@@ -15,7 +15,7 @@ const FormCard = (props) => {
           onMouseLeave={() => {setIsHovered(false)}}
           onClick={handleCardClick}
         >
-          <div className={`reg-card ${isHovered ? '' : ''}`}>
+          <div className={`reg-card ${isHovered ? '' : ''}` }  style={{filter: `${isChecked?'grayscale(0)':'grayscale(1)'}`}}>
             <div className="reg-front">
               <img src={props.background} alt="card" className="reg-card-bg" />
               <div className="reg-contents" style={{color:props.fontColor}}>

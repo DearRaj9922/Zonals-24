@@ -2,12 +2,13 @@ import React from 'react';
 import '../pages.css';
 import './jaipurreg.css';
 import thomsologo from "../../../assets/logo.png";
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import RegisterForm from '../../RegisterForm/registerform';
 import cardbg from '../../../assets/cards.bg.webp'
 
 const JaipurReg = () => {
     const navigate = useNavigate();
+    const{id}=useParams();
     return (
         <div className='regi-main'>
              <div className='RegJ-wrapper'>
@@ -24,6 +25,7 @@ const JaipurReg = () => {
                   font="black"
                   formborder="#D9D9D9"
                   submit="#8F2735"
+                  id={id}
                 />
           </div>
         </div>

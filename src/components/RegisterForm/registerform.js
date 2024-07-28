@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './registerform.css';
 import FormCard from './formCard';
 import cardbg from "../../assets/cardbgbanglore.webp";
@@ -52,11 +52,14 @@ const cards = [
 ]
 
 const RegisterForm = (props) => {
+    const[isChecked,setIsChecked] = useState(false);
+    // let isChecked = false
     return (
         <form className='reg-wrapper' style={{borderColor:`${props.formborder}`}}>
             <div className="reg-events">
               {cards.map((el) => {
                 var style1 = { marginTop: "0px" };
+                el.number===props.id?(setIsChecked(true)):(console.log(props.id))
                 return (
                   <div
                     key={el.number}
@@ -70,7 +73,9 @@ const RegisterForm = (props) => {
                         fontColor={props.font}
                         background={props.cardbg}
                         registerLink={"#"}
-                        rulebookLink={el.href} />
+                        rulebookLink={el.href}
+                        checked={isChecked}
+                         />
                     </div>
                   </div>
                 );
