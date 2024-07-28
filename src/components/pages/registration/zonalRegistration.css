@@ -1,0 +1,645 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+@import url('https://fonts.cdnfonts.com/css/super-comic');
+
+.full-back1 {
+  /* background: url(../../Assests/Lucknow3.webp); */
+  background: url(../../Assests/Lucknow4.webp);
+  width: 100vw;
+  height: 100vh;
+  background-position: center center;
+  fill: linear-gradient(0deg, #000 9.85%, rgba(160, 126, 87, 0) 100%);
+  background-size: cover;
+  display: flex;
+  /* align-items: center; */
+  justify-content: space-between;
+  overflow: hidden;
+}
+
+.full-back2 {
+  background: url(../../Assests/jaipur3.webp);
+  width: 100vw;
+  height: 100vh;
+  background-position: center center;
+  fill: linear-gradient(0deg, #000 9.85%, rgba(160, 126, 87, 0) 100%);
+  background-size: cover;
+  display: flex;
+  /* align-items: center; */
+  justify-content: space-between;
+  overflow: hidden;
+}
+
+.full-back3 {
+  background: url(../../Assests/chandigarh4.webp);
+  width: 100vw;
+  height: 100vh;
+  background-position: center center;
+  fill: linear-gradient(0deg, #000 9.85%, rgba(160, 126, 87, 0) 100%);
+  background-size: cover;
+  display: flex;
+  /* align-items: center; */
+  justify-content: space-between;
+  overflow: hidden;
+}
+.full-back4 {
+  background: url(../../Assests/bangalore2.webp);
+  width: 100vw;
+  height: 100vh;
+  background-position: center center;
+  fill: linear-gradient(0deg, #000 9.85%, rgba(160, 126, 87, 0) 100%);
+  background-size: cover;
+  display: flex;
+  /* align-items: center; */
+  justify-content: space-between;
+  overflow: hidden;
+}
+
+.Zlogin-form-reg {
+  width: 45vw;
+  background: #DEDEDE;
+  border-radius: 4px;
+  margin: 40px 80px 40px 0px;
+  height: 90%;
+  /* border: 1px solid #21213c; */
+  box-sizing: border-box;
+  background: #FEF0E7;
+  box-shadow: 0px 0px 12px 6px rgba(0, 0, 0, 0.04);
+  backdrop-filter: blur(24px);
+  border-radius: 8px;
+  padding: 20px 20px 0 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  border-radius: 12px;
+  border: 1px solid rgba(217, 217, 217, 0.30);
+  background: rgba(217, 217, 217, 0.03);
+  backdrop-filter: blur(15px);
+  overflow-y: auto;
+}
+
+.headline-login {
+  /* position: absolute; */
+  /* width: 75px; */
+  height: 30px;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 100%;
+  padding: 5px 0px 0px 16px;
+  color: #666666;
+}
+
+.border-reg {
+  /* position: absolute; */
+  width: 100%;
+  height: 0px;
+
+  margin-top: 12px;
+  border: 1px dashed #42526d;
+}
+
+.login-form-1-reg {
+  margin-top: 5px;
+  height: 60vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.zi2 {
+  position: relative;
+  /* z-index: 2; */
+}
+
+.fill-it-email {
+  color: #FFF;
+  font-family: Comic Sans MS;
+  font-size: 1.3rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px;
+}
+
+.fill-it-password {
+  float: left;
+  margin-top: 15px;
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 11px;
+  color: #a7b7df;
+}
+
+.row-reg {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-bottom: 10px;
+  margin-left: -7px;
+  margin: 2.5vh 0;
+  padding: 0 1.5vw !important;
+}
+
+.trouble-d {
+  cursor: pointer;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+}
+
+.text-danger {
+  margin-top: 10px;
+  color: rgb(228, 36, 36);
+}
+
+.email2 {
+  /* position: absolute; */
+  margin-top: 10px;
+  width: 94%;
+  height: 35px;
+  border-radius: 1vh;
+  border: 1.49px solid #505050;
+  background: #FFF;
+  box-shadow: 1.4900398254394531px 2.9800796508789062px 0px 0px #505050;
+  padding: 10px;
+  outline: none;
+  /* border: none; */
+  color: #505050;
+  font-family: Comic Sans MS;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px;
+}
+
+.Zpassword2 {
+  /* position: absolute; */
+  margin-top: 10px;
+  width: 97%;
+  height: 35px;
+  border-radius: 1vh;
+  border: 1.49px solid #505050;
+  background: #FFF;
+  box-shadow: 1.4900398254394531px 2.9800796508789062px 0px 0px #505050;
+  padding: 10px;
+  outline: none;
+  /* border: none; */
+  color: #505050;
+  font-family: Comic Sans MS;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px;
+}
+
+.college {
+  /* position: absolute; */
+  margin-top: 10px;
+  width: 97%;
+  height: 35px;
+  border-radius: 1vh;
+  border: 1.49px solid #505050;
+  background: #FFF;
+  box-shadow: 1.4900398254394531px 2.9800796508789062px 0px 0px #505050;
+  padding: 5px;
+  outline: none;
+  /* border: none; */
+  color: #505050;
+  font-family: Comic Sans MS;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px;
+}
+
+.Zgender_class {
+  /* position: absolute; */
+  margin-top: 10px;
+  width: 94%;
+  height: 35px;
+  border-radius: 1vh;
+  border: 1.49px solid #505050;
+  background: #FFF;
+  box-shadow: 1.4900398254394531px 2.9800796508789062px 0px 0px #505050;
+  padding: 5px;
+  outline: none;
+  /* border: none; */
+  color: #505050;
+  font-family: Comic Sans MS;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px;
+}
+
+.Zevents {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 10px;
+  color: #666666;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  margin-left:2vw;
+}
+
+
+.Zevents-box {
+  display: flex;
+  flex-direction: row;
+}
+
+.Zevents label {
+  color: #FFF;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  margin-left: 8px;
+}
+
+.ZenentName {
+  align-items: center;
+  width: 100%;
+  margin-top: 20px;
+}
+.ZenentName input{
+  margin: 7px 0;
+}
+.css-yxqv39-singleValue {
+  color: rgb(102, 102, 102) !important;
+}
+
+@media only screen and (min-width: 768px) {
+  ::-webkit-scrollbar {
+    width: 5px;
+  }
+
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    border-radius: 20px;
+  }
+
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #47267E;
+  }
+
+}
+
+.forgot-pass {
+  display: flex;
+  margin-top: 5px;
+  justify-content: flex-end;
+  align-items: flex-end;
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 11px;
+  line-height: 17px;
+  /* identical to box height */
+  text-transform: capitalize;
+  color: #ffffff;
+}
+
+.Zbtn-reg {
+  border-radius: 6.074px;
+  border: 1.518px solid #505050;
+  background: #CCC;
+  box-shadow: 1.518475890159607px 3.036951780319214px 0px 0px #505050;
+  color: #FFF;
+  font-family: Comic Sans MS;
+  font-size: 1.3rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  /* 100% */
+  line-height: 20px;
+  /* 100% */
+  padding: 0 1.8vw;
+  height: 38px;
+
+}
+
+/* .Zbtn-reg:hover {
+  background-position: right center;
+ change the direction of the change here 
+} */
+
+/* .register-btn {
+  background-image: linear-gradient(89.76deg, #4d14c7 1.03%, #c567fe 99.79%);
+   margin-top: 90px !important; 
+} */
+
+.trouble {
+  margin-top: 20px;
+
+  text-align: center;
+  align-self: center;
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 11px;
+  line-height: 17px;
+  /* identical to box height */
+  color: #ffffff;
+}
+
+.recaptha {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+
+}
+
+.column {
+  display: flex;
+  align-items: center;
+
+  flex-direction: column;
+  width: 100%;
+}
+
+.forcol1{
+  align-items:flex-start !important;
+}
+
+.text-danger {
+  margin-top: 10px;
+  color: rgb(228, 36, 36);
+}
+
+
+/* .headline-login {
+  font-size: 18px;
+} */
+
+.Zbtn {
+  display: flex;
+  margin: 0px 0px 15px 8px;
+  justify-content: flex-end;
+  margin-right: 2.2vw;
+}
+
+.Zimg {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.Zlogo {
+  margin: 40px 0 0 40px;
+  width: 7vw;
+}
+
+.Zleft p {
+  padding: 4vh 0 0 2vw;
+  color: #FFF;
+  font-family:Comic Sans MS;
+  font-size: 3.5vw;
+  font-style: normal;
+  font-weight: 900 !important;
+  /* 166.667% */
+  max-width: 500px;
+  letter-spacing: 3px;
+}
+
+.text-success{
+  color: green;
+  font-size: 18px;
+  padding-left: 10px;
+}
+
+@media screen and (max-width: 1300px) {
+  .Zimg {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 400px;
+    height: 124px;
+
+  }
+
+  .Zlogo {
+    margin: 17px 0px 0px 50px;
+  }
+
+
+  .Zlogin-form-reg {
+    width: 590px;
+    margin: 40px 30px 40px 0px;
+    padding: 10px;
+  }
+
+  .Zlogo {
+    margin: 40px 0 0 40px;
+    width: 10vw;
+  }
+
+  .Zleft p {
+    font-size: 2rem;
+  }
+}
+
+@media screen and (max-width: 950px) {
+
+  .text-success{
+    color: white;
+    font-size: 14px;
+    padding-left: 5px;
+  }
+
+  
+  .Zimg {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 400px;
+    height: 124px;
+
+  }
+
+  .Zbtn {
+    display: flex;
+    margin: 0px 0px 15px 8px;
+    justify-content: center;
+    margin-right: 2.2vw;
+  }
+
+  .Zlogo {
+    margin: 20px 0px 0px 24px;
+    width:13vw;
+  }
+
+
+
+  .full-back1,
+  .full-back2,
+  .full-back3 {
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* .Zleft{
+    
+    } */
+
+  .Zlogin-form-reg {
+    width: 400px !important;
+    justify-content: center;
+    margin: 35px 0px 40px 0px;
+    padding: 20px;
+
+  }
+
+  .login-form-1-reg {
+    width: 100%;
+
+    height: 40vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+
+  .row-reg {
+    display: flex;
+    gap: 10px;
+    margin: 1.4vh 0;
+    flex-direction: column;
+    justify-content: space-between;
+    /* margin-bottom: 10px; */
+    /* margin-left: 0px !important; */
+  }
+
+
+  .college {
+    width: 93% !important
+  }
+
+  .Zgender_class {
+    width: 94% !important
+  }
+
+  .password2 {
+    width: 350px !important
+  }
+
+  .Zpassword2 {
+      width: 93% !important
+    }
+  
+  .Zbtn-reg {
+    width: 160px !important
+  }
+
+  .login-form {
+    width: 300px;
+  }
+
+  .border {
+    /* position: absolute; */
+    width: 200px;
+  }
+
+  /* .password {
+        width: 260px;
+      } */
+  .btn {
+    width: 230px;
+  }
+
+  .Zleft p {
+    text-align: center;
+  }
+
+}
+
+@media screen and (max-width: 460px) {
+
+  .headline-login {
+    font-size: 20px;
+    padding: 10px 0px 10px 4px;
+  }
+
+  .Zpassword2 {
+    width: 255px !important
+  }
+
+  .Zimg {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 290px;
+    height: 95px;
+
+  }
+
+
+  .Zlogo {
+    margin: 15px 0px 0px 24px;
+    width:18vw;
+  }
+
+  .Zleft p {
+    font-size: 1.5rem;
+
+  }
+
+  .Zleft {
+    margin-left: -10px;
+  }
+
+  .Zlogin-form-reg {
+    width: 300px !important;
+    padding: 20px 10px 10px 20px;
+    height: 600px;
+  }
+
+  .login-form-1-reg {
+    margin-top: 10px;
+    height: 47vh;
+  }
+
+  .row-reg {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-bottom: 10px;
+    margin-left: 0px !important
+  }
+
+  .email2 {
+    width: 255px !important
+  }
+
+  .college {
+    width: 255px !important
+  }
+
+  .Zgender_class {
+    width: 255px !important
+  }
+
+  /* .password2{
+      width: 350px !important
+    } */
+  .Zbtn-reg {
+    width: 255px !important
+  }
+
+  .branch {
+    width: 255px !important
+  }
+
+  .Zcarousal {
+    margin-left: -10px;
+    margin-top: 10px;
+  }
+}

@@ -73,7 +73,7 @@ export default function Banglore() {
         <img src={logoBlack} onClick={()=>navigate('/')} className='logo' alt="logo-black"/>
       </div>
       <div className="textdiv-bang">
-        <h1 className='bang-title'>Banglore</h1>
+        <h1 className='bang-title'>Bengaluru</h1>
         <h3 className='venue-bang'>Venue:Lorem, ipsum dolor.</h3>
       </div>
       <div className="cards-bang">
@@ -105,7 +105,7 @@ export default function Banglore() {
                     fontColor={el.color}
                     hoverColor={"#fffff"}
                     background={cardbg}
-                    registerLink={"#"}
+                    registerLink={`/banglore/registration/${el.number}`}
                     rulebookLink={el.href} />
                 </div>
               </div>

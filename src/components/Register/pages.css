@@ -1,0 +1,11 @@
+.regi-main {
+    width: 100vw;
+    height:100vh;
+    overflow: hidden;
+}
+.bang-bg{
+    z-index: -1;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+}
