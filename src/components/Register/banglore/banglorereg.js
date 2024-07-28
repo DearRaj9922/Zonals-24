@@ -14,7 +14,7 @@ const BangaloreReg = () => {
           <img src={thomsologo} onClick={()=>navigate('/')} className="thomso-img" alt="tho-logo" />
         </div>
         <div className="textdiv-bang">
-          <h1 className='bang-title bang-reg-title'>Bangalore</h1>
+          <h1 className='bang-title bang-reg-title'>Bengaluru</h1>
           <h3 className='venue reg-text reg-text-bang'>Registration</h3>
 
           <div className='Reg-box'>

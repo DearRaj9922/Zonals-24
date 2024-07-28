@@ -101,7 +101,7 @@ const location=useLocation();
                 </li>
                 <li className="nav-item">
                   {/* <a className="nav-link" href="#">Bangalore</a> */}
-                  <Link className="nav-link" style={location.pathname==="/banglore"?style2:style3} to="/banglore">Banglore</Link>
+                  <Link className="nav-link" style={location.pathname==="/banglore"?style2:style3} to="/banglore">Bengaluru</Link>
                 </li>
               </ul>
             </div>
