@@ -45,36 +45,36 @@
     margin-right:3vw;
     height:8vh;
 }
-.hidden{
-    /* display: none; */
-    margin-top: 12vh;
-    height:88vh;
-    width:100vw;
-    background-color: black;
-    color: white;
-    font-family: samarkan;
-    font-size:2rem;
-    padding-top: 7vh;
-    z-index: 3;
-    position: fixed;
-    animation: sidePopin 1s forwards;
+    .hidden{
+        /* display: none; */
+        margin-top: 12vh;
+        height:88vh;
+        width:100vw;
+        background-color: black;
+        color: white;
+        font-family: samarkan;
+        font-size:2rem;
+        padding-top: 7vh;
+        z-index: 3;
+        position: fixed;
+        animation: sidePopin 1s forwards;
 
-    
-}
-.visible{
-    display: block;
-    margin-top: 12vh;
-    height:88vh;
-    width:80vw;
-    background-color: black;
-    color: white;
-    font-family: samarkan;
-    font-size:2rem;
-    padding-top: 7vh;
-    z-index: 3;
-    position: fixed;
-    animation: sidePopup 1s forwards;
-}
+        
+    }
+    .visible{
+        display: block;
+        margin-top: 12vh;
+        height:88vh;
+        width:80vw;
+        background-color: black;
+        color: white;
+        font-family: samarkan;
+        font-size:2rem;
+        padding-top: 7vh;
+        z-index: 3;
+        position: fixed;
+        animation: sidePopup 1s forwards;
+    }
 .states{
     display: flex;
     justify-content: center;
