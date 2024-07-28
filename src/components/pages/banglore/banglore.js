@@ -105,7 +105,7 @@ export default function Banglore() {
                     fontColor={el.color}
                     hoverColor={"#fffff"}
                     background={cardbg}
-                    registerLink={"#"}
+                    registerLink={`/banglore/registration/${el.number}`}
                     rulebookLink={el.href} />
                 </div>
               </div>

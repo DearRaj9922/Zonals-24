@@ -1,0 +1,131 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.Zcard input {
+    margin-left: 5px;
+}
+.Zcard label{
+    width: 100%;
+}
+.Zcard {
+    width: 88%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background: transparent;
+    border-radius: 1vh;
+    border: .5vh solid white;
+    background: linear-gradient(0deg, #050301 0%, rgba(0, 0, 0, 0.32) 100%);
+    /* align-items: stretch; */
+}
+
+.card-image {
+    flex: 1;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 80px;
+    margin-top: 22px;
+    padding-bottom: 10px;
+    object-fit: contain;
+ 
+}
+.card-image img{
+    width: 5vw;
+    /* padding-right: 2px; */
+}
+
+.card-title {
+    margin-top: 1.8vh;
+    overflow: hidden;
+    width: 100%;
+    height: 30.5px;
+    background: #777777;
+    border-radius: 0px 0px 4px 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 2px;
+    font-size: 13px;
+    color: #FFFFFF;
+}
+
+
+
+label,
+input {
+    cursor: pointer;
+}
+
+@media screen and (max-width: 786px) {
+    .card-title {
+        width: 109px;
+        border-radius: 0px 0px 4px 4px;
+    }
+
+    .Zcard {
+        width: 110px;
+        height: 146px;
+    }
+    .card-image img{
+        width: 12vw;
+        /* padding-right: 2px; */
+    }
+}
+
+@media screen and (max-width: 460px) {
+
+    .Zcard input {
+        position: absolute;
+        width: 10px;
+        height: 9px;
+        margin-top: 4px;
+    }
+
+    .Zcard {
+        width: 80px !important;
+        height: 110px !important;
+        border: 2px solid white;
+    }
+
+    .card-title {
+        height: 18px;
+        width: 75.9px !important;
+        font-size: 8px;
+        margin-top: 8px;
+        margin-left:0px !important;
+    }
+
+    .card-image {
+        margin-top: 0px;
+        /* margin-left: -14px; */
+        padding-bottom: 0px !important;
+        align-items: flex-end; 
+        /* width: 80px; */
+        font-size: 8px;
+    }
+
+    .card-image img {
+        display: flex;
+        text-align: center;
+        height: 60px;
+        width: auto;
+
+    }
+    .card-image img{
+        width: 10vw;
+        /* padding-right: 2px; */
+    }
+}
+
+  
+  
+
+  

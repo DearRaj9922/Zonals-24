@@ -106,7 +106,7 @@ export default function Chandigarh() {
                     fontColor={el.color}
                     hoverColor={"#fffff"}
                     background={cardbg}
-                    registerLink={"#"}
+                    registerLink={`/chandigarh/registration/${el.number}`}
                     rulebookLink={el.href} />
                 </div>
               </div>

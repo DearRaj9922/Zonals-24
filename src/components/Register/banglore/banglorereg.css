@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Salsa&display=swap');
+
+.RegB-wrapper{
+    height: 100vh;
+    width: auto;
+    overflow: hidden;
+    background-image: url('../../../assets/bangloremobile.webp');
+    background-size: contain;
+}
+
+/* .RegJ-wrapper img{
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+} */
+
+.bangl-reg-bg{
+    z-index: -1;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    background-repeat: repeat;
+    overflow: hidden;
+}
+
+.bang-reg-title{
+    /* margin-top: -3vw; */
+    font-weight: lighter;
+    color: #BE0E20;
+}
+
+.reg-text{
+    font-family: Salsa, cursive !important;
+}
+
+.reg-text-bang{
+    color: #BE0E20;
+}
