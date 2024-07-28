@@ -164,7 +164,7 @@ const navigate=useNavigate();
             // onMouseLeave={handleBangloreLeave}
             onClick={()=>navigate('/banglore')}
           >
-            Banglore
+            Bengaluru
           </button>
         </div>
       </div>

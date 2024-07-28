@@ -73,7 +73,7 @@ export default function Banglore() {
         <img src={logoBlack} onClick={()=>navigate('/')} className='logo' alt="logo-black"/>
       </div>
       <div className="textdiv-bang">
-        <h1 className='bang-title'>Banglore</h1>
+        <h1 className='bang-title'>Bengaluru</h1>
         <h3 className='venue-bang'>Venue:Lorem, ipsum dolor.</h3>
       </div>
       <div className="cards-bang">
