@@ -1,7 +1,7 @@
 // src/App.js
 import React from 'react';
 import Home from "../src/components/Home/home.js";
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { HashRouter as Router, Route, Routes } from 'react-router-dom';
 import Jaipur from "../src/components/pages/jaipur/jaipur.js";
 import Chandigarh from "../src/components/pages/chandigarh/chandigarh.js";
 import Lucknow from "../src/components/pages/lucknow/lucknow.js";
