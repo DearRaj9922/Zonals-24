@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './registerform.css';
 import FormCard from './formCard';
 import cardbg from "../../assets/cardbgbanglore.webp";
@@ -7,6 +7,7 @@ import image2 from "../../assets/mrthomso.webp";
 import image3 from "../../assets/tgt-singing.webp";
 import image4 from "../../assets/open-mic.webp";
 import image5 from "../../assets/tgt-dance.webp";
+import { useParams } from 'react-router-dom';
 
 const cards = [
     {
@@ -15,7 +16,8 @@ const cards = [
       date: "9 September, 2023",
       img: image1,
       href: "https://drive.google.com/file/d/1KDW9W94Chr8oKPRdtEofO5MfpznCq7qD/view?usp=drive_link",
-      color: "#fff"
+      color: "#fff",
+      isChecked: false,
     },
     {
       number: 2,
@@ -23,7 +25,8 @@ const cards = [
       date: "9 September, 2023",
       img: image2,
       href: "https://drive.google.com/file/d/1973FGUsBOy-gLgXp3RItE2IEBTsu31OY/preview",
-      color: "#fff"
+      color: "#fff",
+      isChecked: false,
     },
     {
       number: 3,
@@ -31,7 +34,8 @@ const cards = [
       date: "9 September, 2023",
       img: image3,
       href: "https://drive.google.com/file/d/1FWBLLGR1tGjVy196k4wm44dj9JCS5Vy7/view?usp=drive_link",
-      color: "#fff"
+      color: "#fff",
+      isChecked: false,
     },
     {
       number: 4,
@@ -39,7 +43,8 @@ const cards = [
       date: "9 September, 2023",
       img: image4,
       href: "https://drive.google.com/file/d/1NQNvWUU85MEKSB1L0c_aL53KkrTZxQ2x/view?usp=drive_link",
-      color: "#fff"
+      color: "#fff",
+      isChecked: false,
     },
     {
       number: 5,
@@ -47,19 +52,37 @@ const cards = [
       date: "9 September, 2023",
       img: image5,
       href: "https://drive.google.com/file/d/1FSAD_LcXzyM9jMAwQnneCWhJV3eiUqsn/view?usp=drive_link",
-      color: "#fff"
+      color: "#fff",
+      isChecked: false,
     },
 ]
 
 const RegisterForm = (props) => {
-    const[isChecked,setIsChecked] = useState(false);
+    // const[isChecked,setIsChecked] = useState(false);
     // let isChecked = false
+
+    const [cardList, setCardList] = useState([]);
+    // const id=props.id;
+    const {id}=useParams();
+
+
+  useEffect(() => {
+    const updatedCards = cards.map((card, index) => ({
+      ...card,
+      isChecked: (index+1) === parseInt(id, 10)
+    }));
+    setCardList(updatedCards);
+
+    // console.log(id);
+  }, [id]);
+
+
     return (
         <form className='reg-wrapper' style={{borderColor:`${props.formborder}`}}>
             <div className="reg-events">
-              {cards.map((el) => {
+              {cardList.map((el) => {
                 var style1 = { marginTop: "0px" };
-                el.number===props.id?(setIsChecked(true)):(console.log(props.id))
+                // el.number===props.id?(setIsChecked(true)):(console.log(props.id))
                 return (
                   <div
                     key={el.number}
@@ -74,7 +97,7 @@ const RegisterForm = (props) => {
                         background={props.cardbg}
                         registerLink={"#"}
                         rulebookLink={el.href}
-                        checked={isChecked}
+                        checked={el.isChecked}
                          />
                     </div>
                   </div>
