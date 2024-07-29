@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.4de19102.css",
-    "main.js": "/static/js/main.8ed04853.js",
+    "main.css": "/static/css/main.651bfd9a.css",
+    "main.js": "/static/js/main.b23b0341.js",
     "static/js/453.b4c3c87d.chunk.js": "/static/js/453.b4c3c87d.chunk.js",
     "static/media/India Map 1.webp": "/static/media/India Map 1.f28b49a5aebb435b0e76.webp",
     "static/media/Zonalstext.webp": "/static/media/Zonalstext.765970ed485dedf4e9e7.webp",
@@ -25,6 +25,7 @@
     "static/media/bangloremobile.webp": "/static/media/bangloremobile.5e45a98fd1fd09600906.webp",
     "static/media/SAMARN__.TTF": "/static/media/SAMARN__.917d68d5a10d22b2a4fc.TTF",
     "static/media/mrthomso.webp": "/static/media/mrthomso.dc1db0057a365a07733a.webp",
+    "static/media/logoblack.png": "/static/media/logoblack.5ccc6ded467552101d86.png",
     "static/media/nukkad-natak.webp": "/static/media/nukkad-natak.fe551a70758cb60563c4.webp",
     "static/media/insta.svg": "/static/media/insta.3387319cdc61230d549b6f169b72b9d0.svg",
     "static/media/instaLite.svg": "/static/media/instaLite.4ffa87b42064ba13b1822d269895c973.svg",
@@ -39,12 +40,12 @@
     "static/media/downarrow.svg": "/static/media/downarrow.d99b045e98b569daa751c3cce59ea0cb.svg",
     "index.html": "/index.html",
     "static/media/uparrow.svg": "/static/media/uparrow.f6dc865f5c48f2fcf5b4bcb6f8df6ea3.svg",
-    "main.4de19102.css.map": "/static/css/main.4de19102.css.map",
-    "main.8ed04853.js.map": "/static/js/main.8ed04853.js.map",
+    "main.651bfd9a.css.map": "/static/css/main.651bfd9a.css.map",
+    "main.b23b0341.js.map": "/static/js/main.b23b0341.js.map",
     "453.b4c3c87d.chunk.js.map": "/static/js/453.b4c3c87d.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.4de19102.css",
-    "static/js/main.8ed04853.js"
+    "static/css/main.651bfd9a.css",
+    "static/js/main.b23b0341.js"
   ]
 }
