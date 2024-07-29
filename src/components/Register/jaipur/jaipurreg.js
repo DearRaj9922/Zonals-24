@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import '../pages.css';
 import './jaipurreg.css';
 import thomsologo from "../../../assets/logo.png";
@@ -9,6 +9,8 @@ import cardbg from '../../../assets/cards.bg.webp'
 const JaipurReg = () => {
     const navigate = useNavigate();
     const{id}=useParams();
+
+    // useEffect(() =>{console.log(id)});
     return (
         <div className='regi-main'>
              <div className='RegJ-wrapper'>
