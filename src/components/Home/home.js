@@ -4,6 +4,7 @@ import mapimg from "../../assets/India Map 1.webp";
 import "./home.css";
 import zonaltext from "../../assets/Zonalstext.webp";
 import thomsologo from "../../assets/logo.png";
+import HomeNav from "./homenavbar/homenavbar.js";
 
 export default function Home() {
 
@@ -91,7 +92,8 @@ const navigate=useNavigate();
   };
 
   return (
-    <div className="body">
+    <>
+    <div className="body-home">
       <img src={mapimg} className="map-img" alt="map-img-bg" />
       <div className="area">
         <div
@@ -169,5 +171,19 @@ const navigate=useNavigate();
         </div>
       </div>
     </div>
+    <div className="body-mob">
+    {/* <img src={mapimg} className="map-img" alt="map-img-bg" /> */}
+    <HomeNav/>
+    <div className={`zonalstext ${animate ? "scale-down" : ""}`}>
+          <img
+            src={zonaltext}
+            className="zonals-text"
+            alt="zonalstext"
+            style={{ animation: "popUp 2s forwards" }}
+          />
+       
+        </div>
+    </div>
+    </>
   );
 }

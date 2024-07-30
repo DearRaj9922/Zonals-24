@@ -24,12 +24,35 @@
     position: relative;
   }
   100% {
-    transform: scale(0.4) translate(90vW, -100vh);
+    transform: scale(0.4) translate(90vw, -100vh);
     /* top: 10px; */
     /* left: 10px; */
     width:100vw;
     height: 100vh;
     position: fixed;
+  }
+}
+@keyframes scaleDownMob {
+  0% {
+    transform: scale(1) translate(0, 0);
+    top: 0;
+    left: 0;
+    width:100vw;
+    height: 100vh;
+    position: relative;
+    /* background: black; */
+    /* filter:drop-shadow(0 0 20px  rgb(170, 172, 170)); */
+    
+  }
+  100% {
+    transform: scale(0.4) translate(0, -100vh);
+    /* top: 10px; */
+    /* left: 10px; */
+    width:100vw;
+    height: 100vh;
+    position: fixed;
+    filter: none;
+    /* background: transparent; */
   }
 }
 @keyframes popRight {
@@ -55,7 +78,7 @@
 }
 
 
-.body {
+.body-home {
   user-select: none;
   width: 100vw;
   height: 100vh;
@@ -67,12 +90,12 @@
   
 }
 
-.body::-webkit-scrollbar {
+.body-home::-webkit-scrollbar {
   display: none;
   width: 0; /* For Chrome, Safari, and Opera */
 }
 
-.body.blur {
+.body-home.blur {
   filter: blur(5px);
 }
 
@@ -230,6 +253,9 @@
   animation: enlarge 0.5s forwards;
   cursor: pointer;
 }
+.body-mob{
+  display: none;
+}
 
 @media only screen and (max-width: 1150px) {
   .zoom-area1 .map-img {
@@ -336,5 +362,44 @@
 
   .zoom-area4 .map-img {
     transform: scale(2) translate(8vw, -16vh);
+  }
+}
+
+@media only screen and (max-width:768px){
+  .body-home{
+    display: none;
+  }
+  .body-mob{
+    display: block;
+    width:100vw;
+    height:100vh;
+    display: flex;
+    justify-content: center;
+    background-image: url("../../assets/India Map 1.webp");
+    background-size: cover ;
+    /* background: radial-gradient(circle, transparent 20%, rgba(0,0,0,0.6) 80%); */
+    
+  }
+  /* .map-img{
+    width:auto;
+    height:auto;
+    position:fixed;
+    z-index: -1;
+  } */
+  /* .zonmob{
+    display: flex;
+    justify-content: center;
+    height:100vh;
+    width:100vw;
+  } */
+  .zonals-text{
+    height:30vh;
+    width: auto;
+    margin:0;
+    padding: 0;
+    transition: transform 3s ease, top 3s ease, left 3s ease; 
+  }
+  .zonalstext.scale-down {
+    animation: scaleDownMob 2s forwards;
   }
 }
