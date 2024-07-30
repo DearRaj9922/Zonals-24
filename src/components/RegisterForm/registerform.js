@@ -106,10 +106,9 @@ const RegisterForm = (props) => {
             </div> 
             <div className="reg-form">
                 <input type="text" className="form-input input1" placeholder='Name*' />
-                <input type="text" className="form-input input2" placeholder='E-Mail ID*' />
+                <input type="email" className="form-input input2" placeholder='E-Mail ID*' />
                 <select className="form-input input3">
                     <option value="" disabled selected hidden>Gender*</option>
-                    <option value="male">Divya Raj</option>
                     <option value="male">Male</option>
                     <option value="female">Female</option>
                     <option value="other">Other</option>
