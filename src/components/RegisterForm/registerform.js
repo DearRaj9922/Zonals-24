@@ -67,7 +67,6 @@ const cards = [
 
 const RegisterForm = (props) => {
     const [active, setActive] = useState(false);
-    const zonal = window.location.href.split('/')[window.location.href.split('/').length-3]
     const [mobile_check, setMobile_check] = useState(false);
     const [events, setEvents] = useState([]);
     const [loading, setLoading] = useState(false);
@@ -94,10 +93,7 @@ const RegisterForm = (props) => {
         tgt_singing_category: [],
         tgt_dancing_category: [],
     });
-    const {id} = useParams();
-    const [nameArray,setNameArray] = useState([cards.filter((card) => card.number == id)[0].title]);
-    const defaultSelectedCard = cards.filter((card) => card.number == id)[0];
-    const [selectedCards, setSelectedCards] = useState([defaultSelectedCard]);
+
     const handleChange3 = (e) => {
         setUser({...user, gender: e.target.value});
     };
@@ -200,24 +196,7 @@ const RegisterForm = (props) => {
         //   };
         // },
     };
-    const onChangingCard =(id)=>{
-        if(selectedCards.find(card=>card.number == id)){
-            const newList = selectedCards.filter((card)=>card.number != id)
-            setSelectedCards(newList);
-            const newNameList = nameArray.filter((name)=>name!=selectedCards.find(card=>card.number == id).title)
-            setNameArray(newNameList);
-        }
-        else{
-            setSelectedCards(prev=>{
-                return [...prev, cards.find(card=>card.number == id)];
-            })
-            setNameArray(prev=>{
-                return [...prev, cards.find(card=>card.number == id).title];
-            })
-        }
-        // console.log(nameArray);
-        // console.log(id)
-    }
+
     const onSubmit = async (e) => {
         e.preventDefault();
         setUser({...user, event: LUCKNOW});
@@ -237,21 +216,12 @@ const RegisterForm = (props) => {
         //     "tgt_singing_category",
         //     user.tgt_singing_category.toString()
         // );
-        valuess.append(
-            "tgt_dancing_category",
-            (selectedCards.find(card=>card.number==5)?"team":"")
-        );
-        valuess.append(
-            "tgt_singing_category",
-            (selectedCards.find(card=>card.number==3)?"team":"")
-
-        );
-        valuess.append(
-            "zonals_json_events",
-            JSON.stringify(nameArray)
-        );
+        // valuess.append(
+        //     "zonals_json_events",
+        //     JSON.stringify(user.zonals_json_events)
+        // );
         // for (let i = 0; i < user.zonals_events.length; i++) {
-            valuess.append("zonals_events", (zonal==='jaipur'?(2):(zonal==='lucknow'?(3):(zonal==='banglore'?(4):(zonal==='chandigarh'?(5):(-1))))));
+        //     valuess.append("zonals_events", user.zonals_events[i]);
         // }
         // console.log(user);
         if (user.zonals_events.length === 0) {
@@ -271,9 +241,9 @@ const RegisterForm = (props) => {
                         setActive(false)
                     }
                     setLoading(false);
-                    // setTimeout(() => {
-                    //     window.location.reload(false);
-                    // }, 1000);
+                    setTimeout(() => {
+                        window.location.reload(false);
+                    }, 1000);
                 })
                 .catch((err) => {
                     // console.log("register Error:", err.response.data);
@@ -383,7 +353,6 @@ const RegisterForm = (props) => {
         if (user.name && user.email && user.gender && user.college && user.branch && user.district && user.year) {
             setActive(true)
         }
-        console.log(zonal)
     }, [user])
 
 
@@ -392,7 +361,7 @@ const RegisterForm = (props) => {
 
     const [cardList, setCardList] = useState([]);
     // const id=props.id;
-
+    const {id} = useParams();
 
 
     useEffect(() => {
@@ -420,7 +389,6 @@ const RegisterForm = (props) => {
                         >
                             <div className="card-banglore">
                                 <FormCard
-                                    number={el.number}
                                     name={el.title}
                                     image={el.img}
                                     fontColor={props.font}
@@ -428,9 +396,7 @@ const RegisterForm = (props) => {
                                     registerLink={"#"}
                                     rulebookLink={el.href}
                                     checked={el.isChecked}
-                                    onChange={onChangingCard}
                                 />
-
                             </div>
                         </div>
                     );

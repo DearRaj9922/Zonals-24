@@ -49,12 +49,12 @@
 }
 
 .open {
-  transition: transform 1s ease-in-out;
+  transition: transform 0.5s ease-in-out;
   transform: translateY(-100%);
 }
 
 .close {
-  transition: transform 1s ease-in-out;
+  transition: transform 0.5s ease-in-out;
   transform: translateY(15%);
 }
 
@@ -62,7 +62,7 @@
   gap: 30px;
   display: flex;
   flex-direction: column;
-  width: 50vw;
+  width: 575px;
   color: #FFF;
  
 }
@@ -124,7 +124,7 @@
   }
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 768px) {
   .footerBox {
     display: none;
   }

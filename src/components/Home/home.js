@@ -172,6 +172,7 @@ const navigate=useNavigate();
       </div>
     </div>
     <div className="body-mob">
+      <div className="shadow"></div>
     {/* <img src={mapimg} className="map-img" alt="map-img-bg" /> */}
     <HomeNav/>
     <div className={`zonalstext ${animate ? "scale-down" : ""}`}>

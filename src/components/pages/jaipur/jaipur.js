@@ -75,7 +75,8 @@ export default function Jaipurgarh() {
         </div>
         <div className="textdiv-jaipur">
           <h1 className='jaipur-title'>Jaipur</h1>
-          <h3 className='venue'>Venue:Lorem, ipsum dolor.</h3>
+          <h3 className='venue'>Venue:To Be Declared</h3>
+          <h3 className='venue'>Date:To Be Declared</h3>
         </div>
         <div className="cards">
           {details.map((el) => {
@@ -106,7 +107,8 @@ export default function Jaipurgarh() {
                     fontColor={el.color}
                     hoverColor={"#fffff"}
                     background={cardbg}
-                    registerLink={`/jaipur/registration/${el.number}`}
+                    // registerLink={`/jaipur/registration/${el.number}`}
+                    registerLink={"#"}
                     rulebookLink={el.href} />
                 </div>
               </div>
@@ -120,8 +122,8 @@ export default function Jaipurgarh() {
         <img src={jaipurbgmobile} className='jaipur-bg' alt='jaipurgarh-bg' />
         <div className="textdiv">
           <h1 className='jaipur-title'>Jaipur</h1>
-          <h3 className='venue'>Venue:Lorem, ipsum dolor.</h3>
-          <h3 className='venue'>8 August 2024</h3>
+          <h3 className='venue'>Venue:To Be Declared</h3>
+          <h3 className='venue'>Date:To Be Declared</h3>
         </div>
         <div className="cards">
           {details.map((el) => {
