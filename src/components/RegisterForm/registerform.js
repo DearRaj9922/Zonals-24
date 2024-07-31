@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, {useEffect, useState} from 'react';
 import './registerform.css';
 import FormCard from './formCard';
 import cardbg from "../../assets/cardbgbanglore.webp";
@@ -7,128 +7,445 @@ import image2 from "../../assets/mrthomso.webp";
 import image3 from "../../assets/tgt-singing.webp";
 import image4 from "../../assets/open-mic.webp";
 import image5 from "../../assets/tgt-dance.webp";
-import { useParams } from 'react-router-dom';
+import {useParams} from 'react-router-dom';
+import {JAIPUR, LUCKNOW} from "../Register/constants";
+import CircularProgress from "@mui/material/CircularProgress";
+import axios from 'axios'
+import Creatable from "react-select/creatable";
+import SimpleReactValidator from "simple-react-validator";
+
+import {message} from 'antd';
+import college from "../Register/college";
 
 const cards = [
     {
-      number: 1,
-      title: "Nukkad NATAK",
-      date: "9 September, 2023",
-      img: image1,
-      href: "https://drive.google.com/file/d/1KDW9W94Chr8oKPRdtEofO5MfpznCq7qD/view?usp=drive_link",
-      color: "#fff",
-      isChecked: false,
+        number: 1,
+        title: "Nukkad NATAK",
+        date: "9 September, 2023",
+        img: image1,
+        href: "https://drive.google.com/file/d/1KDW9W94Chr8oKPRdtEofO5MfpznCq7qD/view?usp=drive_link",
+        color: "#fff",
+        isChecked: false,
     },
     {
-      number: 2,
-      title: "MR & MS THOMSO",
-      date: "9 September, 2023",
-      img: image2,
-      href: "https://drive.google.com/file/d/1973FGUsBOy-gLgXp3RItE2IEBTsu31OY/preview",
-      color: "#fff",
-      isChecked: false,
+        number: 2,
+        title: "MR & MS THOMSO",
+        date: "9 September, 2023",
+        img: image2,
+        href: "https://drive.google.com/file/d/1973FGUsBOy-gLgXp3RItE2IEBTsu31OY/preview",
+        color: "#fff",
+        isChecked: false,
     },
     {
-      number: 3,
-      title: "TGT SINGING",
-      date: "9 September, 2023",
-      img: image3,
-      href: "https://drive.google.com/file/d/1FWBLLGR1tGjVy196k4wm44dj9JCS5Vy7/view?usp=drive_link",
-      color: "#fff",
-      isChecked: false,
+        number: 3,
+        title: "TGT SINGING",
+        date: "9 September, 2023",
+        img: image3,
+        href: "https://drive.google.com/file/d/1FWBLLGR1tGjVy196k4wm44dj9JCS5Vy7/view?usp=drive_link",
+        color: "#fff",
+        isChecked: false,
     },
     {
-      number: 4,
-      title: "TGT OPEN MIC",
-      date: "9 September, 2023",
-      img: image4,
-      href: "https://drive.google.com/file/d/1NQNvWUU85MEKSB1L0c_aL53KkrTZxQ2x/view?usp=drive_link",
-      color: "#fff",
-      isChecked: false,
+        number: 4,
+        title: "TGT OPEN MIC",
+        date: "9 September, 2023",
+        img: image4,
+        href: "https://drive.google.com/file/d/1NQNvWUU85MEKSB1L0c_aL53KkrTZxQ2x/view?usp=drive_link",
+        color: "#fff",
+        isChecked: false,
     },
     {
-      number: 5,
-      title: "TGT DANCE",
-      date: "9 September, 2023",
-      img: image5,
-      href: "https://drive.google.com/file/d/1FSAD_LcXzyM9jMAwQnneCWhJV3eiUqsn/view?usp=drive_link",
-      color: "#fff",
-      isChecked: false,
+        number: 5,
+        title: "TGT DANCE",
+        date: "9 September, 2023",
+        img: image5,
+        href: "https://drive.google.com/file/d/1FSAD_LcXzyM9jMAwQnneCWhJV3eiUqsn/view?usp=drive_link",
+        color: "#fff",
+        isChecked: false,
     },
 ]
 
 const RegisterForm = (props) => {
+    const [active, setActive] = useState(false);
+    const [mobile_check, setMobile_check] = useState(false);
+    const [events, setEvents] = useState([]);
+    const [loading, setLoading] = useState(false);
+    const [error, setError] = useState(false);
+    // const [success, setSuccess] = useState(false);
+    const [confrim_err, setConfrim_err] = useState(false);
+    const [errorMsg, setErrorMsg] = useState();
+    const [noContent, SetNoContent] = useState(false);
+    const [isDancing, setIsDancing] = useState(false);
+    const [isSinging, setIsSinging] = useState(false);
+    const params = useParams();
+    const [user, setUser] = useState({
+        name: "",
+        email: "",
+        contact: "",
+        district: "",
+        year: "",
+        degree: "",
+        branch: "",
+        college: "",
+        zonals_events: [1],
+        zonals_json_events: [],
+        event: "",
+        tgt_singing_category: [],
+        tgt_dancing_category: [],
+    });
+
+    const handleChange3 = (e) => {
+        setUser({...user, gender: e.target.value});
+    };
+    const handleChange2 = (college) => {
+        setUser({...user, college: college?.value});
+    };
+
+    const onInputChange = (e) => {
+        setUser({...user, [e.target.name]: e.target.value});
+    }
+    const customStyles = {
+        option: (base) => ({
+            ...base,
+            // borderBottom: "1px solid black",
+            backgroundColor: "white",
+            "&:hover": {
+                background: "grey",
+                color: "black",
+            },
+            // fontFamily: "Comic Sans MS",
+            // fontWeight: 400,
+            // fontSize: 13,
+            color: "black",
+            // padding: 4,
+        }),
+        // control: () => ({
+        //   width: "100%",
+        //   display: "flex",
+        //   // borderBottom: "0.5px solid rgba(255, 255, 255, 0.54)",
+        // }),
+        // input: (base) => ({
+        //   ...base,
+        //   marginTop: "-20px",
+        //   paddingTop: "-20px",
+        //   color: "#666666",
+        //   // fontSize: "14px",
+        //   overflow: "hidden",
+        // }),
+        // // 21q
+        // menuList: (base) => ({
+        //   ...base,
+        //   height: "12vh",
+        //   background: "#FEF0E7",
+        //   border: "1px solid #E35F5F",
+        //   boxShadow: "46px 6px 64px 0px rgba(0, 0, 0, 0.25)",
+        // }),
+        // dropdownIndicator: (base, state) => ({
+        //   ...base,
+        //   marginTop: "-20px",
+        //   fontWeight: "600",
+        //   color: "#666666",
+        //   "&:hover": {
+        //     color: "rgb(255, 255, 255)",
+        //   },
+        //   transform: state.selectProps.menuIsOpen && "rotate(180deg)",
+        // }),
+        // indicatorSeparator: (base) => ({
+        //   ...base,
+        //   display: "none",
+        // }),
+        // menu: (base) => ({
+        //   ...base,
+        //   background: "white",
+        //   height: "12vh",
+        //   marginTop: "-1px",
+        //   marginLeft: "-10px",
+        // }),
+        //
+        // // clearIndicator: () => ({
+        // //   fontWeight: "600",
+        // //   color: "white",
+        // //   // width:'27vw'
+        // // }),
+        // placeholder: (base) => ({
+        //   ...base,
+        //   background: "white",
+        //   fontSize: "1rem",
+        //   // fontFamily: "Comic Sans MS",
+        //   color: "#505050",
+        //   fontWeight: "400",
+        //   lineHeight: "25px"
+        // }),
+        // valueContainer: () => ({
+        //   color: "white",
+        //   fontWeight: "600",
+        //   // opacity: "0.8",
+        //   width: "calc(100% - 40px)",
+        // }),
+        // singleValue: (base, state) => {
+        //   const opacity = state.isDisabled ? 0.5 : 1;
+        //   return {
+        //     ...base,
+        //     opacity,
+        //     // margin: 4,
+        //     background: "white",
+        //     transition: "opacity 300ms",
+        //     color: "#666666",
+        //     fontWeight: "400",
+        //     fontSize: "1rem",
+        //   };
+        // },
+    };
+
+    const onSubmit = async (e) => {
+        e.preventDefault();
+        setUser({...user, event: LUCKNOW});
+        const valuess = new FormData();
+        valuess.append("name", user.name);
+        valuess.append("email", user.email);
+        valuess.append("contact", user.contact);
+        valuess.append("branch", user.branch);
+        valuess.append("college", user.college);
+        valuess.append("event", 1);
+        valuess.append("gender", user.gender);
+        // valuess.append(
+        //     "tgt_dancing_category",
+        //     user.tgt_dancing_category.toString()
+        // );
+        // valuess.append(
+        //     "tgt_singing_category",
+        //     user.tgt_singing_category.toString()
+        // );
+        // valuess.append(
+        //     "zonals_json_events",
+        //     JSON.stringify(user.zonals_json_events)
+        // );
+        // for (let i = 0; i < user.zonals_events.length; i++) {
+        //     valuess.append("zonals_events", user.zonals_events[i]);
+        // }
+        // console.log(user);
+        if (user.zonals_events.length === 0) {
+            setError(true);
+            setErrorMsg("Please select atleast one event");
+        } else {
+            setLoading(true);
+            await axios
+                .post("https://api2.thomso.in/apiV1/zonalsregister", valuess)
+                .then((res) => {
+                    if (res.status === 201) {
+                        //   console.log(res.data);
+                        setError(false);
+                        message.success("🎉You are registered successfully.")
+
+                        setLoading(false)
+                        setActive(false)
+                    }
+                    setLoading(false);
+                    setTimeout(() => {
+                        window.location.reload(false);
+                    }, 1000);
+                })
+                .catch((err) => {
+                    // console.log("register Error:", err.response.data);
+                    var data = "";
+                    for (var key in err?.response?.data) {
+                        data += err?.response?.data[key] + "<br>";
+                    }
+                    setError(true);
+                    setErrorMsg(data);
+                    // this.setState({ errorMsg: data, error: true, success: false });
+                    setLoading(false);
+                });
+        }
+    };
+    // navigate("/")
+    const validator = new SimpleReactValidator();
+
+    const onEventChange = (event) => {
+        if (event.target.name === "TGT Dancing") {
+            setUser({
+                ...user,
+                tgt_dancing_category: "",
+            });
+            setIsDancing(!isDancing);
+        }
+        if (event.target.name === "TGT Singing") {
+            setUser({
+                ...user,
+                tgt_singing_category: "",
+            });
+            setIsSinging(!isSinging);
+        }
+        // console.log(event.target.value);
+        var updatedList = [...user.zonals_events];
+        if (event.target.checked) {
+            updatedList = [...user.zonals_events, event.target.value];
+        } else {
+            updatedList.splice(user.zonals_events.indexOf(event.target.value), 1);
+        }
+        var updatedListNext = [...user.zonals_json_events];
+        if (event.target.checked) {
+            updatedListNext = [...user.zonals_json_events, event.target.name];
+        } else {
+            updatedListNext.splice(
+                user.zonals_json_events.indexOf(event.target.name),
+                1
+            );
+        }
+        setUser({
+            ...user,
+            zonals_events: updatedList,
+            zonals_json_events: updatedListNext,
+        });
+    };
+
+    const onChangeDancing = (e) => {
+        var updatedListNext = [...user.tgt_dancing_category];
+        if (e.target.checked) {
+            updatedListNext = [...user.tgt_dancing_category, e.target.value];
+        } else {
+            updatedListNext.splice(
+                user.tgt_dancing_category.indexOf(e.target.value),
+                1
+            );
+        }
+        setUser({
+            ...user,
+            tgt_dancing_category: updatedListNext,
+        });
+
+        // if (e.target.value === user.tgt_dancing_category) {
+        //   setUser({
+        //     ...user,
+        //     tgt_dancing_category: "",
+        //   });
+        // } else {
+        //   setUser({ ...user, tgt_dancing_category: e.target.value });
+        // }
+    };
+
+    const onChangeSinging = (e) => {
+        var updatedListNext = [...user.tgt_singing_category];
+        if (e.target.checked) {
+            updatedListNext = [...user.tgt_singing_category, e.target.value];
+        } else {
+            updatedListNext.splice(
+                user.tgt_singing_category.indexOf(e.target.value),
+                1
+            );
+        }
+        setUser({
+            ...user,
+            tgt_singing_category: updatedListNext,
+        });
+        // if (e.target.value === user.tgt_singing_category) {
+        //   setUser({
+        //     ...user,
+        //     tgt_singing_category: "",
+        //   });
+        // } else {
+        //   setUser({ ...user, tgt_singing_category: e.target.value });
+        // }
+    };
+
+
+    useEffect(() => {
+        if (user.name && user.email && user.gender && user.college && user.branch && user.district && user.year) {
+            setActive(true)
+        }
+    }, [user])
+
+
     // const[isChecked,setIsChecked] = useState(false);
     // let isChecked = false
 
     const [cardList, setCardList] = useState([]);
     // const id=props.id;
-    const {id}=useParams();
+    const {id} = useParams();
 
 
-  useEffect(() => {
-    const updatedCards = cards.map((card, index) => ({
-      ...card,
-      isChecked: (index+1) === parseInt(id, 10)
-    }));
-    setCardList(updatedCards);
+    useEffect(() => {
+        const updatedCards = cards.map((card, index) => ({
+            ...card,
+            isChecked: (index + 1) === parseInt(id, 10)
+        }));
+        setCardList(updatedCards);
 
-    // console.log(id);
-  }, [id]);
+        // console.log(id);
+    }, [id]);
 
 
     return (
-        <form className='reg-wrapper' style={{borderColor:`${props.formborder}`}}>
+        <form onSubmit={onSubmit} className='reg-wrapper' style={{borderColor: `${props.formborder}`}}>
             <div className="reg-events">
-              {cardList.map((el) => {
-                var style1 = { marginTop: "0px" };
-                // el.number===props.id?(setIsChecked(true)):(console.log(props.id))
-                return (
-                  <div
-                    key={el.number}
-                    style={style1}
-                    // className="flip-card"
-                  >
-                    <div className="card-banglore">
-                      <FormCard
-                        name={el.title}
-                        image={el.img}
-                        fontColor={props.font}
-                        background={props.cardbg}
-                        registerLink={"#"}
-                        rulebookLink={el.href}
-                        checked={el.isChecked}
-                         />
-                    </div>
-                  </div>
-                );
-              })}
-            </div> 
+                {cardList.map((el) => {
+                    var style1 = {marginTop: "0px"};
+                    // el.number===props.id?(setIsChecked(true)):(console.log(props.id))
+                    return (
+                        <div
+                            key={el.number}
+                            style={style1}
+                            // className="flip-card"
+                        >
+                            <div className="card-banglore">
+                                <FormCard
+                                    name={el.title}
+                                    image={el.img}
+                                    fontColor={props.font}
+                                    background={props.cardbg}
+                                    registerLink={"#"}
+                                    rulebookLink={el.href}
+                                    checked={el.isChecked}
+                                />
+                            </div>
+                        </div>
+                    );
+                })}
+            </div>
             <div className="reg-form">
-                <input type="text" className="form-input input1" placeholder='Name*' />
-                <input type="email" className="form-input input2" placeholder='E-Mail ID*' />
-                <select className="form-input input3">
+                <input type="text" name="name" value={user.name} onChange={(e) => onInputChange(e)}
+                       className="form-input input1" placeholder='Name*'/>
+                <input type="email" name="email" value={user.email} onChange={(e) => onInputChange(e)}
+                       className="form-input input2" placeholder='E-Mail ID*'/>
+                <select value={user.gender} onChange={(e)=>handleChange3(e)} className="form-input input3">
                     <option value="" disabled selected hidden>Gender*</option>
                     <option value="male">Male</option>
                     <option value="female">Female</option>
                     <option value="other">Other</option>
                 </select>
-                <select className="form-input input4">
-                    <option value="" disabled selected hidden>District*</option>
-                    <option value="district1">District 1</option>
-                    <option value="district2">District 2</option>
-                    <option value="district3">District 3</option>
-                </select>
-                <select className="form-input input5">
-                    <option value="" disabled selected hidden>College Name*</option>
-                    <option value="college1">College 1</option>
-                    <option value="college2">College 2</option>
-                    <option value="college3">College 3</option>
-                </select>
-                <input type="text" className="form-input input6" placeholder='Branch*' />
-                <input type="text" className="form-input input7" placeholder='Year*' />
+                <input type="text" name="district" value={user.district} onChange={(e) => onInputChange(e)}
+                       className="form-input input4" placeholder='DISTRICT*'/>
+                {/*<select className="form-input input5">*/}
+                {/*    <option value="" disabled selected hidden>College Name*</option>*/}
+                {/*    <option value="college1">College 1</option>*/}
+                {/*    <option value="college2">College 2</option>*/}
+                {/*    <option value="college3">College 3</option>*/}
+                {/*</select>*/}
+                <Creatable
+                    formatCreateLabel={(inputText) => `"${inputText}" Add your college`}
+                    className="form-input input5"
+                    //   value={this.state.college}
+                    styles={customStyles}
+                    placeholder="College Name *"
+                    onChange={handleChange2}
+                    options={college}
+                />
+                <input type="text"
+                       required
+                       name="branch"
+                       value={user.branch}
+                       onChange={(e) => onInputChange(e)} className="form-input input6" placeholder='Branch*'/>
+                <input type="text" name="year" required value={user.year} onChange={(e)=>onInputChange(e)} className="form-input input7" placeholder='Year*'/>
             </div>
-            <button className='reg-submit-button' type='submit' style={{backgroundColor:`${props.submit}`}}>Submit</button>
+            <button className='reg-submit-button' disabled={!active} type='submit'
+                    style={active == true ? {background: `${props.submit}`} : {background: "#CCC"}}>
+                {/*<button className="register-btn Zbtn-reg" disabled={!active} style={active == true ? {background: "rgb(68, 37, 27)"} : {background: "#CCC"}}>*/}
+                {loading ? (
+                    <CircularProgress color="inherit" size={20}/>
+                ) : (
+                    "Submit"
+                )}
+            </button>
         </form>
     );
 }

@@ -1,4 +1,4 @@
-// src/App.js
+ // src/App.js
 import React from 'react';
 import Home from "../src/components/Home/home.js";
 import { HashRouter as Router, Route, Routes } from 'react-router-dom';
