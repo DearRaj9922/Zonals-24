@@ -1,27 +1,32 @@
 @keyframes sidePopup {
-    0%{
+    0% {
         transform: translateX(-100vw);
     }
-    100%{
-        transform:translateX(0);
+
+    100% {
+        transform: translateX(0);
     }
-    
+
 }
+
 @keyframes sidePopin {
-    0%{
+    0% {
         transform: translateX(-20vw);
     }
-    100%{
-        transform:translateX(-100vw);
+
+    100% {
+        transform: translateX(-100vw);
     }
-    
+
 }
-.nav-main{
-    height: 12vh;
+
+.nav-main {
+    height: 10vh;
     width: 100vw;
-    background:transparent;
+    background: transparent !important;
     /* opacity: 0.9; */
     position: fixed;
+    padding: 10px !important;
     z-index: 2;
     display: flex;
     align-items: center;
@@ -30,58 +35,72 @@
     overflow: hidden;
     /* padding-left:5px; */
     /* padding-right: 5px; */
-    
+
 }
-.ham-img{
-    height:6vh;
-    margin-left:3vw;
+
+.ham-img {
+    height: 2vh !important;
+    /* color: black; */
+    filter: brightness(0) saturate(100%);
+    margin-right: 3vw;
 }
-.cross-img{
-    height:6vh;
-    margin-left:3vw;
+
+.cross-img {
+    height: 2vh;
+    filter: brightness(0) saturate(100%);
+
+    margin-right: 2vw;
     display: none;
 }
-.th-logo{
-    margin-right:3vw;
-    height:8vh;
-}
-    .hidden{
-        /* display: none; */
-        margin-top: 12vh;
-        height:88vh;
-        width:100vw;
-        background-color: black;
-        color: white;
-        font-family: samarkan;
-        font-size:2rem;
-        padding-top: 7vh;
-        z-index: 3;
-        position: fixed;
-        animation: sidePopin 1s forwards;
 
-        
-    }
-    .visible{
-        display: block;
-        margin-top: 12vh;
-        height:88vh;
-        width:80vw;
-        background-color: black;
-        color: white;
-        font-family: samarkan;
-        font-size:2rem;
-        padding-top: 7vh;
-        z-index: 3;
-        position: fixed;
-        animation: sidePopup 1s forwards;
-    }
-.states{
+.th-logo {
+    margin-left: 3vw;
+    filter: brightness(0) saturate(100%);
+
+    height: 8vh;
+    /* color: black; */
+    ;
+}
+
+.hidden {
+    /* display: none; */
+    margin-top: 12vh;
+    height: 88vh;
+    width: 100vw;
+    background-color: black;
+    color: white;
+    font-family: samarkan;
+    font-size: 2rem;
+    padding-top: 7vh;
+    z-index: 3;
+    position: fixed;
+    animation: sidePopin 1s forwards;
+
+
+}
+
+.visible {
+    display: block;
+    margin-top: 12vh;
+    height: 88vh;
+    width: 80vw;
+    background-color: black;
+    color: white;
+    font-family: samarkan;
+    font-size: 2rem;
+    padding-top: 7vh;
+    z-index: 3;
+    position: fixed;
+    animation: sidePopup 1s forwards;
+}
+
+.states {
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
     list-style: none;
     font-size: 7vw;
-    gap:7vh
-    /* text-decoration: none; */
+    gap: 7vh
+        /* text-decoration: none; */
 }
