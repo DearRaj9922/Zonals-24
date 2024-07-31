@@ -36,3 +36,11 @@
 .reg-text-luck{
     color: #A9017A;
 }
+@media only screen and (max-width:768px){
+    .RegL-wrapper{
+        overflow: auto;
+    }
+    .thomso-img{
+        width: 13vw;
+    }
+}

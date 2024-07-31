@@ -17,9 +17,9 @@
     
 }
 .nav-main{
-    height: 12vh;
+    height: 9vh;
     width: 100vw;
-    background-color: black;
+    background-color: #2c2c2c;
     /* opacity: 0.9; */
     position: fixed;
     z-index: 2;
@@ -33,24 +33,24 @@
     
 }
 .ham-img{
-    height:6vh;
+    height:4vh;
     margin-left:3vw;
 }
 .cross-img{
-    height:6vh;
+    height:4vh;
     margin-left:3vw;
     display: none;
 }
 .th-logo{
     margin-right:3vw;
-    height:8vh;
+    height:6vh;
 }
     .hidden{
         /* display: none; */
-        margin-top: 12vh;
-        height:88vh;
+        margin-top: 9vh;
+        height:91vh;
         width:100vw;
-        background-color: black;
+        background-color: #2c2c2c;
         color: white;
         font-family: samarkan;
         font-size:2rem;
@@ -63,10 +63,10 @@
     }
     .visible{
         display: block;
-        margin-top: 12vh;
-        height:88vh;
-        width:80vw;
-        background-color: black;
+        margin-top: 9vh;
+        height:91vh;
+        width:85vw;
+        background-color: #2c2c2c;
         color: white;
         font-family: samarkan;
         font-size:2rem;

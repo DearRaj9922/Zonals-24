@@ -20,13 +20,16 @@
     cursor: pointer;
 }
 .textdiv-jaipur{
-    margin-top: 15vh;
+    margin-top: 9vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap:2vh;
-    color: white;
+    color: black;
+}
+.textdiv-jaipur h3{
+    font-family: Salsa;
 }
 .jaipur-title{
     font-size: 6vw;
@@ -59,7 +62,7 @@
         font-size: 8vw;
     }
     .textdiv-jaipur{
-        margin-top:20vh;
+        margin-top:13vh;
     }
 }
 

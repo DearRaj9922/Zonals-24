@@ -45,7 +45,7 @@
     
   }
   100% {
-    transform: scale(0.4) translate(0, -100vh);
+    transform: scale(0.4) translate(0, -110vh);
     /* top: 10px; */
     /* left: 10px; */
     width:100vw;
@@ -74,6 +74,14 @@
     /* font-size: 5vw; */
     transform: scale(1.2)translate(1vw,0);
     filter:drop-shadow(0 0 20px  rgb(125, 127, 125));
+  }
+}
+@keyframes  bgShadow{
+  0% {
+      opacity: 0;
+  }
+  100%{
+      opacity: 0.6;
   }
 }
 
@@ -207,6 +215,7 @@
   position: fixed;
   top:25px;
   left:25px;
+  z-index:2
 }
 .thomso-img{
   width:8vw;
@@ -377,6 +386,7 @@
     justify-content: center;
     background-image: url("../../assets/India Map 1.webp");
     background-size: cover ;
+    user-select: none;
     /* background: radial-gradient(circle, transparent 20%, rgba(0,0,0,0.6) 80%); */
     
   }
@@ -392,12 +402,24 @@
     height:100vh;
     width:100vw;
   } */
+   .shadow{
+    position:fixed;
+    width:100vw;
+    height:100vh;
+    z-index: 1;
+    background-color: black;
+    /* opacity: 0.6; */
+    animation: bgShadow 4s forwards;
+   }
   .zonals-text{
-    height:30vh;
+    height:35vw;
     width: auto;
     margin:0;
     padding: 0;
     transition: transform 3s ease, top 3s ease, left 3s ease; 
+  }
+  .zonalstext{
+    z-index: 2;
   }
   .zonalstext.scale-down {
     animation: scaleDownMob 2s forwards;

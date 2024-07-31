@@ -32,3 +32,11 @@
 .reg-text{
     font-family: Salsa, cursive !important;
 }
+@media only screen and (max-width:768px){
+    .RegJ-wrapper{
+        overflow: auto;
+    }
+    .thomso-img{
+        width: 13vw;
+    }
+}

@@ -36,3 +36,11 @@
 .reg-text-chandi{
     color: white;
 }
+@media only screen and (max-width:768px){
+    .RegC-wrapper{
+        overflow: auto;
+    }
+    .thomso-img{
+        width: 13vw;
+    }
+}

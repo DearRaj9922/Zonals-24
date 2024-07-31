@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import '../pages.css';
 import './jaipurreg.css';
-import thomsologo from "../../../assets/logo.png";
+import thomsologo from "../../../assets/logoblack.svg";
 import { useNavigate, useParams } from 'react-router-dom';
 import RegisterForm from '../../RegisterForm/registerform';
 import cardbg from '../../../assets/cards.bg.webp'
