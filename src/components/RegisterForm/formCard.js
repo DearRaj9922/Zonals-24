@@ -7,6 +7,7 @@ const FormCard = (props) => {
 
     const handleCardClick = () => {
         setIsChecked(prevState => !prevState);
+        props.onChange(props.number)
     };
 
     return (
@@ -20,7 +21,7 @@ const FormCard = (props) => {
               <img src={props.background} alt="card" className="reg-card-bg" />
               <div className="reg-contents" style={{color:props.fontColor}}>
                 <div className="reg-header">
-                    <input type="checkbox" checked={isChecked} />
+                    <input  type="checkbox" checked={isChecked} />
                     <div className="reg-event-name">{props.name}</div>
                 </div>
                 <div className="event-img-div">
