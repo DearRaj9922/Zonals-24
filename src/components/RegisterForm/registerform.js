@@ -408,7 +408,7 @@ const RegisterForm = (props) => {
 
     return (
 
-        <form className='reg-wrapper' style={{borderColor:`${props.formborder}`}}>
+        <form onSubmit={onSubmit} className='reg-wrapper' style={{borderColor:`${props.formborder}`}}>
           <div className="reg-event-wrap">
             <div className="reg-events">
 
