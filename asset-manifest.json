@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.618a2e4d.css",
-    "main.js": "/static/js/main.d9578527.js",
+    "main.css": "/static/css/main.56404666.css",
+    "main.js": "/static/js/main.78306485.js",
     "static/js/453.b4c3c87d.chunk.js": "/static/js/453.b4c3c87d.chunk.js",
     "static/media/India Map 1.webp": "/static/media/India Map 1.f28b49a5aebb435b0e76.webp",
     "static/media/Zonalstext.webp": "/static/media/Zonalstext.765970ed485dedf4e9e7.webp",
@@ -40,12 +40,12 @@
     "static/media/facebookLite.svg": "/static/media/facebookLite.38afabc488b1b2e773c1deaff5c50955.svg",
     "static/media/downarrow.svg": "/static/media/downarrow.1bb3c42d5d8d005ed1ec078d4c76a13d.svg",
     "static/media/uparrow.svg": "/static/media/uparrow.6b0d2c107ac1089a45ff08fe2e0709a7.svg",
-    "main.618a2e4d.css.map": "/static/css/main.618a2e4d.css.map",
-    "main.d9578527.js.map": "/static/js/main.d9578527.js.map",
+    "main.56404666.css.map": "/static/css/main.56404666.css.map",
+    "main.78306485.js.map": "/static/js/main.78306485.js.map",
     "453.b4c3c87d.chunk.js.map": "/static/js/453.b4c3c87d.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.618a2e4d.css",
-    "static/js/main.d9578527.js"
+    "static/css/main.56404666.css",
+    "static/js/main.78306485.js"
   ]
 }
