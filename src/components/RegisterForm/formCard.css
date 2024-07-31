@@ -181,3 +181,19 @@
         width:50vw;
     }
 } */
+@media  only screen and (max-width:768px){
+    .reg-card{
+        width:23vw;
+        height:28vw;
+    }
+    .reg-event-name{
+        font-size: 2vw;
+    }
+    .event-img-div{
+        width: 15vw;
+    }
+    .event-img{
+        width: 15vw;
+    }
+    
+}

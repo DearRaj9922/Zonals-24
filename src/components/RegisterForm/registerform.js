@@ -376,31 +376,35 @@ const RegisterForm = (props) => {
 
 
     return (
-        <form onSubmit={onSubmit} className='reg-wrapper' style={{borderColor: `${props.formborder}`}}>
+
+        <form className='reg-wrapper' style={{borderColor:`${props.formborder}`}}>
+          <div className="reg-event-wrap">
             <div className="reg-events">
-                {cardList.map((el) => {
-                    var style1 = {marginTop: "0px"};
-                    // el.number===props.id?(setIsChecked(true)):(console.log(props.id))
-                    return (
-                        <div
-                            key={el.number}
-                            style={style1}
-                            // className="flip-card"
-                        >
-                            <div className="card-banglore">
-                                <FormCard
-                                    name={el.title}
-                                    image={el.img}
-                                    fontColor={props.font}
-                                    background={props.cardbg}
-                                    registerLink={"#"}
-                                    rulebookLink={el.href}
-                                    checked={el.isChecked}
-                                />
-                            </div>
-                        </div>
-                    );
-                })}
+              {cardList.map((el) => {
+                var style1 = { marginTop: "0px" };
+                // el.number===props.id?(setIsChecked(true)):(console.log(props.id))
+                return (
+                  <div
+                    key={el.number}
+                    style={style1}
+                    // className="flip-card"
+                  >
+                    <div className="card-banglore">
+                      <FormCard
+                        name={el.title}
+                        image={el.img}
+                        fontColor={props.font}
+                        background={props.cardbg}
+                        registerLink={"#"}
+                        rulebookLink={el.href}
+                        checked={el.isChecked}
+                         />
+                    </div>
+                  </div>
+                );
+              })}
+            </div> 
+
             </div>
             <div className="reg-form">
                 <input type="text" name="name" value={user.name} onChange={(e) => onInputChange(e)}

@@ -1,7 +1,7 @@
 import React from 'react';
 import '../pages.css';
 import './lucknowreg.css';
-import thomsologo from "../../../assets/logoblack.png";
+import thomsologo from "../../../assets/logoblack.svg";
 import { useNavigate } from 'react-router-dom';
 import RegisterForm from '../../RegisterForm/registerform';
 import cardbg from '../../../assets/cardbglucknow.webp'

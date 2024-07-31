@@ -27,6 +27,9 @@
     align-items: center;
     gap:2vh;
 }
+.textdiv-luck h3{
+    font-family: Salsa;
+} 
 .luck-title{
     font-size: 6vw;
     padding: 0;

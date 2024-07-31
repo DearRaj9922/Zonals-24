@@ -74,7 +74,8 @@ export default function Banglore() {
       </div>
       <div className="textdiv-bang">
         <h1 className='bang-title'>Bengaluru</h1>
-        <h3 className='venue-bang'>Venue:Lorem, ipsum dolor.</h3>
+        <h3 className='venue-bang'>Venue:To Be Declared</h3>
+        <h3 className='venue-bang'>Date:To Be Declared</h3>
       </div>
       <div className="cards-bang">
           {details.map((el) => {
@@ -105,7 +106,8 @@ export default function Banglore() {
                     fontColor={el.color}
                     hoverColor={"#fffff"}
                     background={cardbg}
-                    registerLink={`/banglore/registration/${el.number}`}
+                    // registerLink={`/banglore/registration/${el.number}`}
+                    registerLink={"#"}
                     rulebookLink={el.href} />
                 </div>
               </div>
@@ -120,8 +122,8 @@ export default function Banglore() {
       <img src={bangbgmobile} className='bang-bg' alt='bang-bg'/>
       <div className="textdiv-bang">
         <h1 className='bang-title'>Banglore</h1>
-        <h3 className='venue-bang'>Venue:Lorem, ipsum dolor.</h3>
-        <h3 className='venue-bang'>8 August 2024</h3>
+        <h3 className='venue-bang'>Venue:To Be Declared</h3>
+        <h3 className='venue-bang'>Date:To Be Declared</h3>
       </div>
       <div className="cards-bang">
           {details.map((el) => {
