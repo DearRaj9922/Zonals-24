@@ -79,6 +79,7 @@ const RegisterForm = (props) => {
 
     return (
         <form className='reg-wrapper' style={{borderColor:`${props.formborder}`}}>
+          <div className="reg-event-wrap">
             <div className="reg-events">
               {cardList.map((el) => {
                 var style1 = { marginTop: "0px" };
@@ -104,6 +105,7 @@ const RegisterForm = (props) => {
                 );
               })}
             </div> 
+            </div>
             <div className="reg-form">
                 <input type="text" className="form-input input1" placeholder='Name*' />
                 <input type="email" className="form-input input2" placeholder='E-Mail ID*' />

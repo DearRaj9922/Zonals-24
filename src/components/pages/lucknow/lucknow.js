@@ -74,7 +74,8 @@ export default function Lucknow() {
       </div>
       <div className="textdiv-luck">
         <h1 className='luck-title'>Lucknow</h1>
-        <h3 className='venue-luck'>Venue:Lorem, ipsum dolor.</h3>
+        <h3 className='venue-luck'>Venue:BBD University</h3>
+        <h3 className='venue-luck'>8 August 2024</h3>
       </div>
       <div className="cards-luck">
           {details.map((el) => {
@@ -119,8 +120,8 @@ export default function Lucknow() {
       <img src={luckbgmobile} className='luck-bg' alt='luck-bg'/>
       <div className="textdiv-luck">
         <h1 className='luck-title'>Lucknow</h1>
-        <h3 className='venue-luck'>Venue:Lorem, ipsum dolor.</h3>
-        <h3 className='venue-luck'>8 August 2024</h3>
+        <h3 className='venue-luck'>Venue:BBD University</h3>
+        <h3 className='venue-luck'>11 August 2024</h3>
       </div>
       <div className="cards-luck">
           {details.map((el) => {
@@ -138,7 +139,7 @@ export default function Lucknow() {
                     image={el.img}
                     fontColor={el.color}
                     background={cardmobbg}
-                    registerLink={"#"}
+                    registerLink={`/lucknow/registration/${el.number}`}
                     rulebookLink={el.href} />
                 </div>
               </div>

@@ -36,3 +36,11 @@
 .reg-text-bang{
     color: #BE0E20;
 }
+@media only screen and (max-width:768px){
+    .RegB-wrapper{
+        overflow: auto;
+    }
+    .thomso-img{
+        width: 13vw;
+    }
+}
