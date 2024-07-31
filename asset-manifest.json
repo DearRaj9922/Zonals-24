@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.56404666.css",
-    "main.js": "/static/js/main.ac1df49c.js",
+    "main.css": "/static/css/main.b367297c.css",
+    "main.js": "/static/js/main.326c7ec5.js",
     "static/js/453.c03a8697.chunk.js": "/static/js/453.c03a8697.chunk.js",
     "static/media/India Map 1.webp": "/static/media/India Map 1.f28b49a5aebb435b0e76.webp",
     "static/media/Zonalstext.webp": "/static/media/Zonalstext.765970ed485dedf4e9e7.webp",
@@ -9,10 +9,10 @@
     "static/media/banglore.webp": "/static/media/banglore.d509aec26bf44c71b65e.webp",
     "static/media/jaipurbg.webp": "/static/media/jaipurbg.feca7ca24584f0b74358.webp",
     "static/media/chandigarh.webp": "/static/media/chandigarh.cfcb0b216bc838db14b6.webp",
-    "static/media/logoblack.svg": "/static/media/logoblack.9a956bcb29591f7ef1901f5acde78415.svg",
     "static/media/cardbgmoblucknow.webp": "/static/media/cardbgmoblucknow.e10303deea894ee1ab36.webp",
     "static/media/cardbgmobbanglore.webp": "/static/media/cardbgmobbanglore.99f7ff0e700f22a4d7db.webp",
     "static/media/cardmobilebg.webp": "/static/media/cardmobilebg.95f290cacef9ae4552ea.webp",
+    "static/media/logoblack.svg": "/static/media/logoblack.aa1fea4ae431756cf857024d681e0c96.svg",
     "static/media/cardbglucknow.webp": "/static/media/cardbglucknow.8f88bf08e1ed6d76925a.webp",
     "static/media/lucknowmobile.webp": "/static/media/lucknowmobile.d2cc8534bc2d2a46e416.webp",
     "static/media/tgt-singing.webp": "/static/media/tgt-singing.c250cae537aceb4251b0.webp",
@@ -25,7 +25,6 @@
     "static/media/bangloremobile.webp": "/static/media/bangloremobile.5e45a98fd1fd09600906.webp",
     "static/media/SAMARN__.TTF": "/static/media/SAMARN__.917d68d5a10d22b2a4fc.TTF",
     "static/media/mrthomso.webp": "/static/media/mrthomso.dc1db0057a365a07733a.webp",
-    "static/media/logoblack.png": "/static/media/logoblack.5ccc6ded467552101d86.png",
     "static/media/nukkad-natak.webp": "/static/media/nukkad-natak.fe551a70758cb60563c4.webp",
     "static/media/insta.svg": "/static/media/insta.f52a73bdfa07f0cee6153e9404e6b695.svg",
     "static/media/instaLite.svg": "/static/media/instaLite.935e17fffce805ac9345744788eec9c8.svg",
@@ -40,12 +39,12 @@
     "static/media/facebookLite.svg": "/static/media/facebookLite.38afabc488b1b2e773c1deaff5c50955.svg",
     "static/media/downarrow.svg": "/static/media/downarrow.1bb3c42d5d8d005ed1ec078d4c76a13d.svg",
     "static/media/uparrow.svg": "/static/media/uparrow.6b0d2c107ac1089a45ff08fe2e0709a7.svg",
-    "main.56404666.css.map": "/static/css/main.56404666.css.map",
-    "main.ac1df49c.js.map": "/static/js/main.ac1df49c.js.map",
+    "main.b367297c.css.map": "/static/css/main.b367297c.css.map",
+    "main.326c7ec5.js.map": "/static/js/main.326c7ec5.js.map",
     "453.c03a8697.chunk.js.map": "/static/js/453.c03a8697.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.56404666.css",
-    "static/js/main.ac1df49c.js"
+    "static/css/main.b367297c.css",
+    "static/js/main.326c7ec5.js"
   ]
 }
