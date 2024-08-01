@@ -78,6 +78,10 @@ const RegisterForm = (props) => {
     const [noContent, SetNoContent] = useState(false);
     const [isDancing, setIsDancing] = useState(false);
     const [isSinging, setIsSinging] = useState(false);
+    const [danceSolo,setDanceSolo] = useState(false);
+    const [danceTeam, setDanceTeam] = useState(false);
+    const [singingSolo, setSingingSolo] = useState(false);
+    const [singingTeam, setSingingTeam] = useState(false);
     const params = useParams();
     const [user, setUser] = useState({
         name: "",
@@ -127,6 +131,9 @@ const validateMobileNumber = (e) => {
       setMobile_check(mnumber.length !== 10);
     }
   };
+    const singingChange = ()=>{
+
+    }
     const customStyles = {
         option: (base) => ({
             ...base,
@@ -225,6 +232,8 @@ const validateMobileNumber = (e) => {
             setSelectedCards(newList);
             const newNameList = nameArray.filter((name)=>name!=selectedCards.find(card=>card.number == id).title)
             setNameArray(newNameList);
+            if(id==3) setIsSinging(false)
+            if(id==5) setIsDancing(false)
         }
         else{
             setSelectedCards(prev=>{
@@ -233,6 +242,8 @@ const validateMobileNumber = (e) => {
             setNameArray(prev=>{
                 return [...prev, cards.find(card=>card.number == id).title];
             })
+            if(id==3) setIsSinging(true)
+            if(id==5) setIsDancing(true)
         }
         // console.log(nameArray);
         // console.log(id)
@@ -256,15 +267,15 @@ const validateMobileNumber = (e) => {
             "tgt_singing_category",
             user.tgt_singing_category.toString()
         );
-        valuess.append(
-            "tgt_dancing_category",
-            (selectedCards.find(card=>card.number==5)?"team":"")
-        );
-        valuess.append(
-            "tgt_singing_category",
-            (selectedCards.find(card=>card.number==3)?"team":"")
-
-        );
+        // valuess.append(
+        //     "tgt_dancing_category",
+        //     (selectedCards.find(card=>card.number==5)?"team":"")
+        // );
+        // valuess.append(
+        //     "tgt_singing_category",
+        //     (selectedCards.find(card=>card.number==3)?"team":"")
+        //
+        // );
         valuess.append(
             "zonals_json_events",
             JSON.stringify(nameArray)
@@ -399,7 +410,7 @@ const validateMobileNumber = (e) => {
 
 
     useEffect(() => {
-        if (user.name && user.email && user.gender && user.college && user.branch && user.district && user.year) {
+        if (user.name && user.email && user.gender && user.college && user.branch && user.contact && user.year) {
             setActive(true)
         }
         console.log(zonal)
@@ -472,8 +483,8 @@ const validateMobileNumber = (e) => {
                     <option value="female">Female</option>
                     <option value="other">Other</option>
                 </select>
-                <input type="text" name="district" value={user.district} onChange={(e) => onInputChange(e)}
-                       className="form-input input4" placeholder='DISTRICT*'/>
+                <input type="text" name="branch" value={user.branch} onChange={(e) => onInputChange(e)}
+                       className="form-input input4" placeholder='Branch*'/>
                 {/*<select className="form-input input5">*/}
                 {/*    <option value="" disabled selected hidden>College Name*</option>*/}
                 {/*    <option value="college1">College 1</option>*/}
