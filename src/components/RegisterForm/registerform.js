@@ -98,6 +98,7 @@ const RegisterForm = (props) => {
     const [nameArray,setNameArray] = useState([cards.filter((card) => card.number == id)[0].title]);
     const defaultSelectedCard = cards.filter((card) => card.number == id)[0];
     const [selectedCards, setSelectedCards] = useState([defaultSelectedCard]);
+
     const handleChange3 = (e) => {
         setUser({...user, gender: e.target.value});
     };
@@ -108,6 +109,24 @@ const RegisterForm = (props) => {
     const onInputChange = (e) => {
         setUser({...user, [e.target.name]: e.target.value});
     }
+    // const validateMobileNumber = (e) => {
+    //     if (e.target.value.length <= 10) {
+    //       setMobile_check(true);
+    //       setUser({ ...user, [e.target.name]: e.target.value });
+    //       let mnumber = e.target.value;
+    //       if (mnumber.length == 10) {
+    //         setMobile_check(false);
+    //       }
+    //     }
+    //   };
+
+const validateMobileNumber = (e) => {
+    const mnumber = e.target.value;
+    if (mnumber.length <= 10 && /^[0-9]*$/.test(mnumber)) {
+      setUser({ ...user, contact: mnumber });
+      setMobile_check(mnumber.length !== 10);
+    }
+  };
     const customStyles = {
         option: (base) => ({
             ...base,
@@ -229,14 +248,14 @@ const RegisterForm = (props) => {
         valuess.append("college", user.college);
         valuess.append("event", 1);
         valuess.append("gender", user.gender);
-        // valuess.append(
-        //     "tgt_dancing_category",
-        //     user.tgt_dancing_category.toString()
-        // );
-        // valuess.append(
-        //     "tgt_singing_category",
-        //     user.tgt_singing_category.toString()
-        // );
+        valuess.append(
+            "tgt_dancing_category",
+            user.tgt_dancing_category.toString()
+        );
+        valuess.append(
+            "tgt_singing_category",
+            user.tgt_singing_category.toString()
+        );
         valuess.append(
             "tgt_dancing_category",
             (selectedCards.find(card=>card.number==5)?"team":"")
@@ -407,6 +426,7 @@ const RegisterForm = (props) => {
 
 
     return (
+<>
 
         <form onSubmit={onSubmit} className='reg-wrapper' style={{borderColor:`${props.formborder}`}}>
           <div className="reg-event-wrap">
@@ -469,13 +489,87 @@ const RegisterForm = (props) => {
                     onChange={handleChange2}
                     options={college}
                 />
-                <input type="text"
+                <input 
                        required
+                    //    type='number'
                        name="branch"
-                       value={user.branch}
-                       onChange={(e) => onInputChange(e)} className="form-input input6" placeholder='Branch*'/>
+                       value={user.contact}
+                       onChange={(e) => validateMobileNumber(e)}
+                       className="form-input input6" 
+                       placeholder='Phone Number*'
+                       />{""}    
+                {mobile_check && (
+                  <div className="text-danger">
+                    Please enter valid Mobile Number
+                  </div>
+                )}
+                
                 <input type="text" name="year" required value={user.year} onChange={(e)=>onInputChange(e)} className="form-input input7" placeholder='Year*'/>
             </div>
+            <div className="Zevents-box">
+              {isDancing && (
+                <div className="Zevents">
+                  <div className="forcol1">
+                    <div className="fill-it-email">For TGT Dancing</div>
+                  </div>
+                  <div className="ZenentName">
+                    <input
+                      type="checkbox"
+                      id="solo"
+                      name="solo"
+                      value="solo"
+                      onChange={onChangeDancing}
+                      checked={user.tgt_dancing_category.includes("solo")}
+                    />
+                    <label>Solo</label>
+                    <br />
+                    <input
+                      type="checkbox"
+                      id="team"
+                      name="team"
+                      checked={user.tgt_dancing_category.includes("team")}
+                      value="team"
+                      onChange={onChangeDancing}
+                    />
+                    <label>Team</label>
+                  </div>
+                </div>
+              )}
+              {isSinging && (
+                <div className="Zevents">
+                  <div className="forcol1">
+                    <div className="fill-it-email">For TGT Singing</div>
+                  </div>
+                  <div className="ZenentName">
+                    <input
+                      type="checkbox"
+                      id="solo"
+                      name="solo"
+                      value="solo"
+                      checked={user.tgt_singing_category.includes("solo")}
+                      onChange={onChangeSinging}
+                    />
+                    <label>Solo</label>
+                    <br />
+                    <input
+                      type="checkbox"
+                      id="team"
+                      name="team"
+                      checked={user.tgt_singing_category.includes("team")}
+                      value="team"
+                      onChange={onChangeSinging}
+                    />
+                    <label>Team</label>
+                  </div>
+                </div>
+              )}
+            </div>
+            {error && (
+              <div
+                className="text-danger"
+                dangerouslySetInnerHTML={{ __html: errorMsg }}
+              ></div>
+            )}
             <button className='reg-submit-button' disabled={!active} type='submit'
                     style={active == true ? {background: `${props.submit}`} : {background: "#CCC"}}>
                 {/*<button className="register-btn Zbtn-reg" disabled={!active} style={active == true ? {background: "rgb(68, 37, 27)"} : {background: "#CCC"}}>*/}
@@ -486,6 +580,7 @@ const RegisterForm = (props) => {
                 )}
             </button>
         </form>
+        </>
     );
 }
 

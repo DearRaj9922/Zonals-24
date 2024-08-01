@@ -3,7 +3,7 @@
 .RegL-wrapper{
     height: 100vh;
     width: auto;
-    overflow: hidden;
+    overflow: auto;
     background-image: url('../../../assets/lucknowmobile.webp');
     background-size: contain;
 }
