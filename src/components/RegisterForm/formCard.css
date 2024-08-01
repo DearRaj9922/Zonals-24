@@ -82,7 +82,7 @@
 
 .btn-1, .btn-2 {
     font-family: Salsa;
-    color: #323232;
+    /* color: #323232; */
     background: transparent;
     border: 3px ;
     border-radius: 5px;

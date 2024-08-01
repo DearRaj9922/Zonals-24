@@ -21,9 +21,9 @@ export default function Jaipurgarh() {
   const details = [
     {
       number: 1,
-      title: "Nukkad NATAK",
+      title: "NUKKAD NATAK",
       description: "Blend of Performing Arts, Music and Dance",
-      date: "9 September, 2023",
+      date: "To be Declared",
       img: image1,
       href: "https://drive.google.com/file/d/1KDW9W94Chr8oKPRdtEofO5MfpznCq7qD/view?usp=drive_link",
       color: "#323232"
@@ -32,7 +32,7 @@ export default function Jaipurgarh() {
       number: 2,
       title: "MR & MS THOMSO",
       description: "Contest of Individuality and Temperament",
-      date: "9 September, 2023",
+      date: "To be Declared",
       img: image2,
       href: "https://drive.google.com/file/d/1973FGUsBOy-gLgXp3RItE2IEBTsu31OY/preview",
       color: "#323232"
@@ -41,7 +41,7 @@ export default function Jaipurgarh() {
       number: 3,
       title: "TGT SINGING",
       description: "A Showcase of Musical Melodies",
-      date: "9 September, 2023",
+      date: "To be Declared",
       img: image3,
       href: "https://drive.google.com/file/d/1FWBLLGR1tGjVy196k4wm44dj9JCS5Vy7/view?usp=drive_link",
       color: "#323232"
@@ -50,7 +50,7 @@ export default function Jaipurgarh() {
       number: 4,
       title: "TGT OPEN MIC",
       description: "Exhibition of Raw Talent",
-      date: "9 September, 2023",
+      date: "To be Declared",
       img: image4,
       href: "https://drive.google.com/file/d/1NQNvWUU85MEKSB1L0c_aL53KkrTZxQ2x/view?usp=drive_link",
       color: "#323232"
@@ -59,7 +59,7 @@ export default function Jaipurgarh() {
       number: 5,
       title: "TGT DANCE",
       description: "An Electrifying Dance-off",
-      date: "9 September, 2023",
+      date: "To be Declared",
       img: image5,
       href: "https://drive.google.com/file/d/1FSAD_LcXzyM9jMAwQnneCWhJV3eiUqsn/view?usp=drive_link",
       color: "#323232"
@@ -76,7 +76,7 @@ export default function Jaipurgarh() {
         <div className="textdiv-jaipur">
           <h1 className='jaipur-title'>Jaipur</h1>
           <h3 className='venue'>Venue:To Be Declared</h3>
-          <h3 className='venue'>Date:To Be Declared</h3>
+          {/* <h3 className='venue'>Date:To Be Declared</h3> */}
         </div>
         <div className="cards">
           {details.map((el) => {
