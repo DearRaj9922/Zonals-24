@@ -74,7 +74,7 @@ export default function Lucknow() {
       </div>
       <div className="textdiv-luck">
         <h1 className='luck-title'>Lucknow</h1>
-        <h3 className='venue-luck'>Venue:BBD University</h3>
+        <h3 className='venue-luck'>Venue: BBD University</h3>
         {/* <h3 className='venue-luck'>8 August 2024</h3> */}
       </div>
       <div className="cards-luck">

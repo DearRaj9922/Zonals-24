@@ -75,7 +75,7 @@ export default function Chandigarh() {
       </div>
       <div className="textdiv-chandi">
         <h1 className='chandi-title'>Chandigarh</h1>
-        <h3 className='venue-chandi'>venue:To Be Declared</h3>
+        <h3 className='venue-chandi'>venue: To Be Declared</h3>
         {/* <h3 className='venue-chandi'>Date:To Be  Declared</h3> */}
       </div>
       <div className="cards-chandi">

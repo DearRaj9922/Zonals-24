@@ -75,7 +75,7 @@ export default function Jaipurgarh() {
         </div>
         <div className="textdiv-jaipur">
           <h1 className='jaipur-title'>Jaipur</h1>
-          <h3 className='venue'>Venue:To Be Declared</h3>
+          <h3 className='venue'>Venue: To Be Declared</h3>
           {/* <h3 className='venue'>Date:To Be Declared</h3> */}
         </div>
         <div className="cards">

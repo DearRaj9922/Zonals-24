@@ -74,7 +74,7 @@ export default function Banglore() {
       </div>
       <div className="textdiv-bang">
         <h1 className='bang-title'>Bengaluru</h1>
-        <h3 className='venue-bang'>Venue:To Be Declared</h3>
+        <h3 className='venue-bang'>Venue: To Be Declared</h3>
         {/* <h3 className='venue-bang'>Date:To Be Declared</h3> */}
       </div>
       <div className="cards-bang">
