@@ -1,7 +1,9 @@
 import React from 'react'
 import './card.css'
+import {useNavigate} from "react-router-dom";
 
-export default function mobcard(props) {
+export default function Mobcard(props) {
+    const navigate = useNavigate()
   return (
     <div>
       <div className="mobcard">
@@ -16,8 +18,8 @@ export default function mobcard(props) {
             </div>
             {/* <div className="event-date-mob">{props.date}</div> */}
             <div className="buttons-div-mob">
-            <button className="btn-1-mob" style={{border:`3px solid ${props.fontColor}`,color:props.fontColor }} onClick={() => window.open(props.registerLink, '_blank')}>Register</button>
-            <button className="btn-2-mob" style={{border:`3px solid ${props.fontColor}`,color:props.fontColor }} onClick={() => window.open(props.rulebookLink, '_blank')}>RuleBook</button>
+            <button className="btn-1-mob" style={{border:`3px solid ${props.fontColor}`,color:props.fontColor }} onClick={() => navigate(props.registerLink)}>Register</button>
+            <button className="btn-2-mob" style={{border:`3px solid ${props.fontColor}`,color:props.fontColor }} onClick={() => navigate(props.rulebookLink)}>RuleBook</button>
           </div>
           </div>
       </div>
