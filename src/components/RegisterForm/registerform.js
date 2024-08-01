@@ -20,7 +20,7 @@ import college from "../Register/college";
 const cards = [
     {
         number: 1,
-        title: "Nukkad NATAK",
+        title: "NUKKAD NATAK",
         date: "9 September, 2023",
         img: image1,
         href: "https://drive.google.com/file/d/1KDW9W94Chr8oKPRdtEofO5MfpznCq7qD/view?usp=drive_link",
