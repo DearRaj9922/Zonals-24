@@ -82,3 +82,8 @@
         overflow-x: scroll;
     }
 }
+.Zevents-box{
+  display: flex;
+    gap: 100px;
+    font-weight: 500;
+}
