@@ -136,8 +136,8 @@ const navigate=useNavigate();
         <div className={`buttons ${animate ? "scale-down" : ""}`}>
           <button
             className={`jaipur ${jaipurButtonHovered ? "enlarged" : ""}`}
-            // onMouseEnter={handleJaipurHover}
-            // onMouseLeave={handleJaipurLeave}
+            onMouseEnter={handleJaipurHover}
+            onMouseLeave={handleJaipurLeave}
             onClick={()=>navigate('/jaipur')}
           >
             Jaipur
@@ -146,24 +146,24 @@ const navigate=useNavigate();
             className={`chandigarh ${
               chandigarhButtonHovered ? "enlarged" : ""
             }`}
-            // onMouseEnter={handleChandigarhHover}
-            // onMouseLeave={handleChandigarhLeave}
+            onMouseEnter={handleChandigarhHover}
+            onMouseLeave={handleChandigarhLeave}
             onClick={()=>navigate('/chandigarh')}
           >
             Chandigarh
           </button>
           <button
             className={`lucknow ${lucknowButtonHovered ? "enlarged" : ""}`}
-            // onMouseEnter={handleLucknowHover}
-            // onMouseLeave={handleLucknowLeave}
+            onMouseEnter={handleLucknowHover}
+            onMouseLeave={handleLucknowLeave}
             onClick={()=>navigate('/lucknow')}
           >
             Lucknow
           </button>
           <button
             className={`banglore ${bangloreButtonHovered ? "enlarged" : ""}`}
-            // onMouseEnter={handleBangloreHover}
-            // onMouseLeave={handleBangloreLeave}
+            onMouseEnter={handleBangloreHover}
+            onMouseLeave={handleBangloreLeave}
             onClick={()=>navigate('/banglore')}
           >
             Bengaluru

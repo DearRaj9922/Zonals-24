@@ -13,6 +13,17 @@
     filter:drop-shadow(0 0 20px  rgb(170, 172, 170));
   }
 }
+@keyframes scrollDownScaleUp {
+  0% {
+    transform: translateY(0) scale(1);
+  }
+  50% {
+    transform: translateY(30vh) scale(1);
+  }
+  100% {
+    transform: translateY(30vh) scale(2) 
+  }
+}
 
 @keyframes scaleDown {
   0% {
@@ -118,7 +129,7 @@
 .area1, .area2, .area3, .area4 {
   border-radius: 50%;
   background-color: red;
-  opacity: 0;
+  opacity: 0.5;
   z-index: 1;
   position: absolute;
   transition: transform 0.5s ease-in-out; /* Smooth transition for the areas */
@@ -159,7 +170,7 @@
 
 /* Zoom effects */
 .zoom-area1 .map-img {
-  transform: scale(2) translate(8vw, 17vh);
+  transform: scale(2) translate(8vw,17vh);
 }
 
 .zoom-area2 .map-img {
@@ -173,6 +184,7 @@
 .zoom-area4 .map-img {
   transform: scale(2) translate(8vw, -25vh);
 }
+
 
 .zonalstext {
   width: 100vw;
