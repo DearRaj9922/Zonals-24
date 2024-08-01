@@ -26,7 +26,7 @@ export default function Chandigarh() {
       description: "Blend of Performing Arts, Music and Dance",
       date: "To be Declared",
       img: image1,
-      href: "https://drive.google.com/file/d/1KDW9W94Chr8oKPRdtEofO5MfpznCq7qD/view?usp=drive_link",
+      href: "https://drive.google.com/file/d/1x5LTSUOhBSmMWt091NncQ5pVN_DZAO_V/view?usp=drive_link",
       color: "#323232"
     },
     {
@@ -35,7 +35,7 @@ export default function Chandigarh() {
       description: "Contest of Individuality and Temperament",
       date: "To be Declared",
       img: image2,
-      href: "https://drive.google.com/file/d/1973FGUsBOy-gLgXp3RItE2IEBTsu31OY/preview",
+      href: "https://drive.google.com/file/d/1C9NtXQW8Diu7lQ_oxyV_zK0QUfoTI87S/view?usp=drive_link",
       color: "#323232"
     },
     {
@@ -44,7 +44,7 @@ export default function Chandigarh() {
       description: "A Showcase of Musical Melodies",
       date: "To be Declared",
       img: image3,
-      href: "https://drive.google.com/file/d/1FWBLLGR1tGjVy196k4wm44dj9JCS5Vy7/view?usp=drive_link",
+      href: "https://drive.google.com/file/d/1iR2Kyxxz4YNexXUQe11-bVXpDM_keZUG/view?usp=drive_link",
       color: "#323232"
     },
     {
@@ -53,7 +53,7 @@ export default function Chandigarh() {
       description: "Exhibition of Raw Talent",
       date: "To be Declared",
       img: image4,
-      href: "https://drive.google.com/file/d/1NQNvWUU85MEKSB1L0c_aL53KkrTZxQ2x/view?usp=drive_link",
+      href: "https://drive.google.com/file/d/1kQYmdiyLF5ShWraLngDB74ICyANCVFu3/view?usp=drive_link",
       color: "#323232"
     },
     {
@@ -62,7 +62,7 @@ export default function Chandigarh() {
       description: "An Electrifying Dance-off",
       date: "To be Declared",
       img: image5,
-      href: "https://drive.google.com/file/d/1FSAD_LcXzyM9jMAwQnneCWhJV3eiUqsn/view?usp=drive_link",
+      href: "https://drive.google.com/file/d/1pYgSHZrJVl4Pm3bug2fQm_Jn4-eH5DND/view?usp=drive_link",
       color: "#323232"
     },
   ];

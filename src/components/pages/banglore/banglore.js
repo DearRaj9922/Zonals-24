@@ -25,7 +25,7 @@ export default function Banglore() {
       description: "Blend of Performing Arts, Music and Dance",
       date: "To be Declared",
       img: image1,
-      href: "https://drive.google.com/file/d/1KDW9W94Chr8oKPRdtEofO5MfpznCq7qD/view?usp=drive_link",
+      href: "https://drive.google.com/file/d/1B1ey49nvJZJ8746sIsCrZoLCB9ih3ZjU/view?usp=drive_link",
       color: "#fff"
     },
     {
@@ -34,7 +34,7 @@ export default function Banglore() {
       description: "Contest of Individuality and Temperament",
       date: "To be Declared",
       img: image2,
-      href: "https://drive.google.com/file/d/1973FGUsBOy-gLgXp3RItE2IEBTsu31OY/preview",
+      href: "https://drive.google.com/file/d/187T1dqfxKQf5izirdfxfq13fe0IuwVP9/view?usp=drive_link",
       color: "#fff"
     },
     {
@@ -43,7 +43,7 @@ export default function Banglore() {
       description: "A Showcase of Musical Melodies",
       date: "To be Declared",
       img: image3,
-      href: "https://drive.google.com/file/d/1FWBLLGR1tGjVy196k4wm44dj9JCS5Vy7/view?usp=drive_link",
+      href: "https://drive.google.com/file/d/1X2nJ3VnZUDksJ840AdFBkbb8_-N5Z3WT/view?usp=drive_link",
       color: "#fff"
     },
     {
@@ -52,7 +52,7 @@ export default function Banglore() {
       description: "Exhibition of Raw Talent",
       date: "To be Declared",
       img: image4,
-      href: "https://drive.google.com/file/d/1NQNvWUU85MEKSB1L0c_aL53KkrTZxQ2x/view?usp=drive_link",
+      href: "https://drive.google.com/file/d/1ZJqfwdzc9dLXby4Z11TCXI1Y8mSYSiJR/view?usp=drive_link",
       color: "#fff"
     },
     {
@@ -61,7 +61,7 @@ export default function Banglore() {
       description: "An Electrifying Dance-off",
       date: "To be Declared",
       img: image5,
-      href: "https://drive.google.com/file/d/1FSAD_LcXzyM9jMAwQnneCWhJV3eiUqsn/view?usp=drive_link",
+      href: "https://drive.google.com/file/d/1mbVCNylX0ug6Cb47GJSKL4B7P1QJla91/view?usp=drive_link",
       color: "#fff"
     },
   ];

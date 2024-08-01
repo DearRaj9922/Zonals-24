@@ -21,11 +21,11 @@ export default function Lucknow() {
   const details = [
     {
       number: 1,
-      title: "Nukkad NATAK",
+      title: "NUKKAD NATAK",
       description: "Blend of Performing Arts, Music and Dance",
       date: "11 August, 2024",
       img: image1,
-      href: "https://drive.google.com/file/d/1KDW9W94Chr8oKPRdtEofO5MfpznCq7qD/view?usp=drive_link",
+      href: "https://drive.google.com/file/d/1QgJRaC3IuG897PabnXZWF5ca1wwZmkKS/view?usp=drive_link",
       color: "#fff"
     },
     {
@@ -34,7 +34,7 @@ export default function Lucknow() {
       description: "Contest of Individuality and Temperament",
       date: "11 August, 2024",
       img: image2,
-      href: "https://drive.google.com/file/d/1973FGUsBOy-gLgXp3RItE2IEBTsu31OY/preview",
+      href: "https://drive.google.com/file/d/1evvyInTWOfe0qiakr28wuA_o8-QxqrgU/view?usp=drive_link",
       color: "#fff"
     },
     {
@@ -43,7 +43,7 @@ export default function Lucknow() {
       description: "A Showcase of Musical Melodies",
       date: "11 August, 2024",
       img: image3,
-      href: "https://drive.google.com/file/d/1FWBLLGR1tGjVy196k4wm44dj9JCS5Vy7/view?usp=drive_link",
+      href: "https://drive.google.com/file/d/1ozjH7ryyS7BxYG0YMkVTQPFogCJ1RfDs/view?usp=drive_link",
       color: "#fff"
     },
     {
@@ -52,7 +52,7 @@ export default function Lucknow() {
       description: "Exhibition of Raw Talent",
       date: "11 August, 2024",
       img: image4,
-      href: "https://drive.google.com/file/d/1NQNvWUU85MEKSB1L0c_aL53KkrTZxQ2x/view?usp=drive_link",
+      href: "https://drive.google.com/file/d/1jzMdAtOYUAV0qykQ1kyI-f_AptPfretv/view?usp=drive_link",
       color: "#fff"
     },
     {
@@ -61,7 +61,7 @@ export default function Lucknow() {
       description: "An Electrifying Dance-off",
       date: "11 August, 2024",
       img: image5,
-      href: "https://drive.google.com/file/d/1FSAD_LcXzyM9jMAwQnneCWhJV3eiUqsn/view?usp=drive_link",
+      href: "https://drive.google.com/file/d/1VQCWrgNBBi7k4g5o3LglpJ1mlW64biBN/view?usp=drive_link",
       color: "#fff"
     },
   ];

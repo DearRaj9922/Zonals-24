@@ -25,7 +25,7 @@ export default function Jaipurgarh() {
       description: "Blend of Performing Arts, Music and Dance",
       date: "To be Declared",
       img: image1,
-      href: "https://drive.google.com/file/d/1KDW9W94Chr8oKPRdtEofO5MfpznCq7qD/view?usp=drive_link",
+      href: "https://drive.google.com/file/d/1lDQC2OtZYBO_1MEygyaznNiG74GfvgfW/view?usp=drive_link",
       color: "#323232"
     },
     {
@@ -34,7 +34,7 @@ export default function Jaipurgarh() {
       description: "Contest of Individuality and Temperament",
       date: "To be Declared",
       img: image2,
-      href: "https://drive.google.com/file/d/1973FGUsBOy-gLgXp3RItE2IEBTsu31OY/preview",
+      href: "https://drive.google.com/file/d/1K1o5jJINbenawi3stXgDfkZvE7K9JVHR/view?usp=drive_link",
       color: "#323232"
     },
     {
@@ -43,7 +43,7 @@ export default function Jaipurgarh() {
       description: "A Showcase of Musical Melodies",
       date: "To be Declared",
       img: image3,
-      href: "https://drive.google.com/file/d/1FWBLLGR1tGjVy196k4wm44dj9JCS5Vy7/view?usp=drive_link",
+      href: "https://drive.google.com/file/d/1B3iIDHUGlh7w0LeXQ0QqyFE-xUI2uu2o/view?usp=drive_link",
       color: "#323232"
     },
     {
@@ -52,7 +52,7 @@ export default function Jaipurgarh() {
       description: "Exhibition of Raw Talent",
       date: "To be Declared",
       img: image4,
-      href: "https://drive.google.com/file/d/1NQNvWUU85MEKSB1L0c_aL53KkrTZxQ2x/view?usp=drive_link",
+      href: "https://drive.google.com/file/d/1zUStJSYPb7Wcy6h32sMeayeB4-6l1bPT/view?usp=drive_link",
       color: "#323232"
     },
     {
@@ -61,7 +61,7 @@ export default function Jaipurgarh() {
       description: "An Electrifying Dance-off",
       date: "To be Declared",
       img: image5,
-      href: "https://drive.google.com/file/d/1FSAD_LcXzyM9jMAwQnneCWhJV3eiUqsn/view?usp=drive_link",
+      href: "https://drive.google.com/file/d/1HIZ3j4aUQX9dMzbSy1PGnb5SrLC3sAjK/view?usp=drive_link",
       color: "#323232"
     },
   ];
