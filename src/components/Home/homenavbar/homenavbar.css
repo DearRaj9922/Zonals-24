@@ -86,12 +86,10 @@
     height: 91vh;
     width: 100vw;
     background:transparent;
-    /* opacity: ; */
     color: white;
     font-family: samarkan;
     font-size: 2rem;
     background-color: black;
-    /* opacity: 0.6; */
     opacity: 0.5;
     animation: bgShadow 4s forwards;
     padding-top: 7vh;
