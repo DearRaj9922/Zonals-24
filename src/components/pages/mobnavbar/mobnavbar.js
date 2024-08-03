@@ -17,17 +17,17 @@ export default function Mobnavbar() {
   return (
     <>
     <div className='nav-main'>
-    <img src={ham} className="ham-img" onClick={toggleNav} style={{ display: isOpen ? 'none' : 'block' }} />
-    <img src={cross} className="cross-img" onClick={toggleNav} style={{ display: isOpen ? 'block' : 'none' }} />
     <img src={thlogo} onClick={()=>navigate('/')} className="th-logo" />
+    <img src={cross} className="cross-img" onClick={toggleNav} style={{ display: isOpen ? 'block' : 'none' }} />
+    <img src={ham} className="ham-img" onClick={toggleNav} style={{ display: isOpen ? 'none' : 'block' }} />
       
     </div>
-    <div id="sideNav" className={isOpen ? 'visible' : 'hidden'}>
+    <div id="sideNav" className={isOpen ? 'hidden' : 'visible'}>
         <ul className='states'>
             <li onClick={()=>navigate('/jaipur')}>Jaipur</li>
             <li onClick={()=>navigate('/chandigarh')}>Chandigarh</li>
             <li onClick={()=>navigate('/lucknow')}>Lucknow</li>
-            <li onClick={()=>navigate('/banglore')}>Banglore</li>
+            <li onClick={()=>navigate('/banglore')}>Bengaluru</li>
         </ul>
     </div>
     </>

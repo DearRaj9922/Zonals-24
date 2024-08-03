@@ -27,7 +27,7 @@ export default function Mobnavbar() {
           <li onClick={() => navigate('/jaipur')}>Jaipur</li>
           <li onClick={() => navigate('/chandigarh')}>Chandigarh</li>
           <li onClick={() => navigate('/lucknow')}>Lucknow</li>
-          <li onClick={() => navigate('/banglore')}>Banglore</li>
+          <li onClick={() => navigate('/banglore')}>Bengaluru</li>
         </ul>
       </div>
     </>
