@@ -121,7 +121,7 @@ export default function Banglore() {
       <MobNavbar/>
       <img src={bangbgmobile} className='bang-bg' alt='bang-bg'/>
       <div className="textdiv-bang">
-        <h1 className='bang-title'>Banglore</h1>
+        <h1 className='bang-title'>Bengaluru</h1>
         <h3 className='venue-bang'>Venue:To Be Declared</h3>
         <h3 className='venue-bang'>Date:To Be Declared</h3>
       </div>

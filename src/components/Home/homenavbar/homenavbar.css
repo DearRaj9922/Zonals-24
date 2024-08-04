@@ -49,10 +49,10 @@
 .cross-imghome {
     height: 2vh;
     /* filter: brightness(0) saturate(100%); */
-
-    margin-right: 2vw;
-    display: none;
+    margin-right: 3vw;
+    margin-right: 4vw;
 }
+
 
 .th-logohome {
     margin-left: 3vw;
@@ -86,10 +86,12 @@
     height: 91vh;
     width: 100vw;
     background:transparent;
-    /* opacity: ; */
     color: white;
     font-family: samarkan;
     font-size: 2rem;
+    background-color: black;
+    opacity: 0.5;
+    animation: bgShadow 4s forwards;
     padding-top: 7vh;
     z-index: 3;
     position: fixed;
@@ -98,11 +100,14 @@
 
 .stateshome {
     display: flex;
+    /* width: 100vw; */
     justify-content: center;
     flex-direction: column;
+    padding: 0;
     align-items: center;
+    margin: 0;
     list-style: none;
     font-size: 7vw;
-    gap: 7vh
+    gap: 7vh /* text-decoration: none; */;
         /* text-decoration: none; */
 }
