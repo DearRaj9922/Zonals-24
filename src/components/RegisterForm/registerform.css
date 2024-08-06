@@ -32,7 +32,9 @@
 }
 
 .form-input {
-    padding: 6px;
+    border-radius: 5px;
+    padding: 0 6px 0 6px;
+    border: 1px solid grey;
 }
 
 .form-input::placeholder {
@@ -47,7 +49,9 @@
 .input2 { grid-area: 1 / 2 / 2 / 3; }
 .input3 { grid-area: 2 / 1 / 3 / 2; }
 .input4 { grid-area: 2 / 2 / 3 / 3; }
-.input5 { grid-area: 3 / 1 / 4 / 3; }
+.input5 {
+     grid-area: 3 / 1 / 4 / 3; 
+    background-color: white;}
 .input6 { grid-area: 4 / 1 / 5 / 2; }
 .input7 { grid-area: 4 / 2 / 5 / 3; }
 

@@ -20,15 +20,16 @@
     cursor: pointer;
 }
 .textdiv-luck{
-    margin-top: 7vh;
+    margin-top: 3vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap:2vh;
+    /* gap:2vh; */
 }
 .textdiv-luck h3{
     font-family: Salsa;
+    margin-bottom: 2vh;
 } 
 .luck-title{
     font-size: 6vw;

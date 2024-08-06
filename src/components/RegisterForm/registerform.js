@@ -410,7 +410,7 @@ const validateMobileNumber = (e) => {
 
 
     useEffect(() => {
-        if (user.name && user.email && user.gender && user.college && user.branch && user.contact && user.year) {
+        if (user.name && user.email && user.gender && user.college && user.branch && user.contact && user.year &&  !mobile_check) {
             setActive(true)
         }
         console.log(zonal)
