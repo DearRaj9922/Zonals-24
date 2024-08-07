@@ -66,9 +66,11 @@ const cards = [
 ]
 
 const RegisterForm = (props) => {
+    const {id} = useParams();
     const [active, setActive] = useState(false);
     const zonal = window.location.href.split('/')[window.location.href.split('/').length-3]
     const [mobile_check, setMobile_check] = useState(false);
+    const defaultSelectedCard = cards.filter((card) => card.number == id)[0];
     const [events, setEvents] = useState([]);
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState(false);
@@ -76,8 +78,8 @@ const RegisterForm = (props) => {
     const [confrim_err, setConfrim_err] = useState(false);
     const [errorMsg, setErrorMsg] = useState();
     const [noContent, SetNoContent] = useState(false);
-    const [isDancing, setIsDancing] = useState(false);
-    const [isSinging, setIsSinging] = useState(false);
+    const [isDancing, setIsDancing] = useState(defaultSelectedCard.number===5);
+    const [isSinging, setIsSinging] = useState(defaultSelectedCard.number===3);
     const [danceSolo,setDanceSolo] = useState(false);
     const [danceTeam, setDanceTeam] = useState(false);
     const [singingSolo, setSingingSolo] = useState(false);
@@ -98,9 +100,8 @@ const RegisterForm = (props) => {
         tgt_singing_category: [],
         tgt_dancing_category: [],
     });
-    const {id} = useParams();
     const [nameArray,setNameArray] = useState([cards.filter((card) => card.number == id)[0].title]);
-    const defaultSelectedCard = cards.filter((card) => card.number == id)[0];
+
     const [selectedCards, setSelectedCards] = useState([defaultSelectedCard]);
 
     const handleChange3 = (e) => {
@@ -257,7 +258,7 @@ const validateMobileNumber = (e) => {
         valuess.append("contact", user.contact);
         valuess.append("branch", user.branch);
         valuess.append("college", user.college);
-        valuess.append("event", 1);
+        valuess.append("event", 2);
         valuess.append("gender", user.gender);
         valuess.append(
             "tgt_dancing_category",
@@ -290,7 +291,7 @@ const validateMobileNumber = (e) => {
         } else {
             setLoading(true);
             await axios
-                .post("https://api2.thomso.in/apiV1/zonalsregister", valuess)
+                .post("http://127.0.0.1:8000/apiV1/zonalsregister", valuess)
                 .then((res) => {
                     if (res.status === 201) {
                         //   console.log(res.data);
