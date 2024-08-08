@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.6cb381c6.css",
-    "main.js": "/static/js/main.282fec24.js",
+    "main.css": "/static/css/main.acc1e230.css",
+    "main.js": "/static/js/main.dc00d2b5.js",
     "static/js/453.c03a8697.chunk.js": "/static/js/453.c03a8697.chunk.js",
     "static/media/India Map 1.webp": "/static/media/India Map 1.f28b49a5aebb435b0e76.webp",
     "static/media/Zonalstext.webp": "/static/media/Zonalstext.765970ed485dedf4e9e7.webp",
@@ -17,6 +17,7 @@
     "static/media/lucknowmobile.webp": "/static/media/lucknowmobile.d2cc8534bc2d2a46e416.webp",
     "static/media/tgt-singing.webp": "/static/media/tgt-singing.c250cae537aceb4251b0.webp",
     "static/media/cardbgbanglore.webp": "/static/media/cardbgbanglore.6bc70b139daaf91dcef7.webp",
+    "static/media/logo-nodate-white.svg": "/static/media/logo-nodate-white.f6c4139af81dad3a05f6d787d4fa49d5.svg",
     "static/media/cards.bg.webp": "/static/media/cards.bg.850547dc34a0034f2eae.webp",
     "static/media/jaipurbgmobile.webp": "/static/media/jaipurbgmobile.56881bf3c979198ff8e8.webp",
     "static/media/chandigarhmobile.webp": "/static/media/chandigarhmobile.06173c223b073fe4b368.webp",
@@ -39,12 +40,12 @@
     "static/media/facebookLite.svg": "/static/media/facebookLite.38afabc488b1b2e773c1deaff5c50955.svg",
     "static/media/downarrow.svg": "/static/media/downarrow.1bb3c42d5d8d005ed1ec078d4c76a13d.svg",
     "static/media/uparrow.svg": "/static/media/uparrow.6b0d2c107ac1089a45ff08fe2e0709a7.svg",
-    "main.6cb381c6.css.map": "/static/css/main.6cb381c6.css.map",
-    "main.282fec24.js.map": "/static/js/main.282fec24.js.map",
+    "main.acc1e230.css.map": "/static/css/main.acc1e230.css.map",
+    "main.dc00d2b5.js.map": "/static/js/main.dc00d2b5.js.map",
     "453.c03a8697.chunk.js.map": "/static/js/453.c03a8697.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.6cb381c6.css",
-    "static/js/main.282fec24.js"
+    "static/css/main.acc1e230.css",
+    "static/js/main.dc00d2b5.js"
   ]
 }
