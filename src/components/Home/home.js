@@ -5,6 +5,9 @@ import "./home.css";
 import zonaltext from "../../assets/Zonalstext.webp";
 import thomsologo from "../../assets/logo.png";
 import HomeNav from "./homenavbar/homenavbar.js";
+import Footer from "../Footer/FooterMain.js";
+// import FooterMainpage from "../FooterMainpage.js";
+// import Footer from "../Footer/Footer.js";
 
 export default function Home() {
 
@@ -185,6 +188,9 @@ const navigate=useNavigate();
        
         </div>
     </div>
+    {/* <FooterMainpage/> */}
+    {/* <Footer/> */}
+    <Footer/>
     </>
   );
 }
