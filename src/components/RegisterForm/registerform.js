@@ -291,7 +291,7 @@ const validateMobileNumber = (e) => {
         } else {
             setLoading(true);
             await axios
-                .post("http://127.0.0.1:8000/apiV1/zonalsregister", valuess)
+                .post("https://api2.thomso.in/apiV1/zonalsregister", valuess)
                 .then((res) => {
                     if (res.status === 201) {
                         //   console.log(res.data);
