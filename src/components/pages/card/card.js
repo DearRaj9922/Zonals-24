@@ -32,6 +32,7 @@
 import React, { useState } from 'react';
 import "./card.css";
 import { useNavigate } from 'react-router-dom';
+import {message} from "antd"
 
 export default function Card(props) {
   const [isHovered, setIsHovered] = useState(false);
@@ -64,7 +65,7 @@ export default function Card(props) {
         <div className="back">
           <img src={props.background} alt="card" className="card-bg" />
           <div className="buttons-div">
-            <button style={{border:`3px solid ${colorhover}`,color:`${colorhover}`}} className="btn-1" onClick={() => navigate(props.registerLink)}>Register</button>
+            <button style={{border:`3px solid ${colorhover}`,color:`${colorhover}`}} className="btn-1" onClick={() => message.error(" Registrations are closed!.")}>Register</button>
             <button style={{border:`3px solid ${colorhover}`,color:`${colorhover}` }} className="btn-2" onClick={() => window.open(props.rulebookLink,'_blanck')}>RuleBook</button>
           </div>
         </div>
