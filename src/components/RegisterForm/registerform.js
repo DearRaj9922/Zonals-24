@@ -258,7 +258,7 @@ const validateMobileNumber = (e) => {
         valuess.append("contact", user.contact);
         valuess.append("branch", user.branch);
         valuess.append("college", user.college);
-        valuess.append("event", 2);
+        valuess.append("event", 3);
         valuess.append("gender", user.gender);
         valuess.append(
             "tgt_dancing_category",
