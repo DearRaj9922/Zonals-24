@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.acc1e230.css",
-    "main.js": "/static/js/main.1a438d66.js",
+    "main.js": "/static/js/main.dea96eb1.js",
     "static/js/453.c03a8697.chunk.js": "/static/js/453.c03a8697.chunk.js",
     "static/media/India Map 1.webp": "/static/media/India Map 1.f28b49a5aebb435b0e76.webp",
     "static/media/Zonalstext.webp": "/static/media/Zonalstext.765970ed485dedf4e9e7.webp",
@@ -41,11 +41,11 @@
     "static/media/downarrow.svg": "/static/media/downarrow.1bb3c42d5d8d005ed1ec078d4c76a13d.svg",
     "static/media/uparrow.svg": "/static/media/uparrow.6b0d2c107ac1089a45ff08fe2e0709a7.svg",
     "main.acc1e230.css.map": "/static/css/main.acc1e230.css.map",
-    "main.1a438d66.js.map": "/static/js/main.1a438d66.js.map",
+    "main.dea96eb1.js.map": "/static/js/main.dea96eb1.js.map",
     "453.c03a8697.chunk.js.map": "/static/js/453.c03a8697.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.acc1e230.css",
-    "static/js/main.1a438d66.js"
+    "static/js/main.dea96eb1.js"
   ]
 }
