@@ -23,7 +23,7 @@ export default function Jaipurgarh() {
       number: 1,
       title: "NUKKAD NATAK",
       description: "Blend of Performing Arts, Music and Dance",
-      date: "To be Declared",
+      date: "25th August, 2024",
       img: image1,
       href: "https://drive.google.com/file/d/1lDQC2OtZYBO_1MEygyaznNiG74GfvgfW/view?usp=drive_link",
       color: "#323232"
@@ -32,7 +32,7 @@ export default function Jaipurgarh() {
       number: 2,
       title: "MR & MS THOMSO",
       description: "Contest of Individuality and Temperament",
-      date: "To be Declared",
+      date: "25th August, 2024",
       img: image2,
       href: "https://drive.google.com/file/d/1K1o5jJINbenawi3stXgDfkZvE7K9JVHR/view?usp=drive_link",
       color: "#323232"
@@ -41,7 +41,7 @@ export default function Jaipurgarh() {
       number: 3,
       title: "TGT SINGING",
       description: "A Showcase of Musical Melodies",
-      date: "To be Declared",
+      date: "25th August, 2024",
       img: image3,
       href: "https://drive.google.com/file/d/1B3iIDHUGlh7w0LeXQ0QqyFE-xUI2uu2o/view?usp=drive_link",
       color: "#323232"
@@ -50,7 +50,7 @@ export default function Jaipurgarh() {
       number: 4,
       title: "TGT OPEN MIC",
       description: "Exhibition of Raw Talent",
-      date: "To be Declared",
+      date: "25th August, 2024",
       img: image4,
       href: "https://drive.google.com/file/d/1zUStJSYPb7Wcy6h32sMeayeB4-6l1bPT/view?usp=drive_link",
       color: "#323232"
@@ -59,7 +59,7 @@ export default function Jaipurgarh() {
       number: 5,
       title: "TGT DANCE",
       description: "An Electrifying Dance-off",
-      date: "To be Declared",
+      date: "25th August, 2024",
       img: image5,
       href: "https://drive.google.com/file/d/1HIZ3j4aUQX9dMzbSy1PGnb5SrLC3sAjK/view?usp=drive_link",
       color: "#323232"
@@ -75,7 +75,7 @@ export default function Jaipurgarh() {
         </div>
         <div className="textdiv-jaipur">
           <h1 className='jaipur-title'>Jaipur</h1>
-          <h3 className='venue'>Venue: To Be Declared</h3>
+          <h3 className='venue'>Venue: JECRC College</h3>
           {/* <h3 className='venue'>Date:To Be Declared</h3> */}
         </div>
         <div className="cards">
@@ -122,8 +122,8 @@ export default function Jaipurgarh() {
         <img src={jaipurbgmobile} className='jaipur-bg' alt='jaipurgarh-bg' />
         <div className="textdiv">
           <h1 className='jaipur-title'>Jaipur</h1>
-          <h3 className='venue'>Venue:To Be Declared</h3>
-          <h3 className='venue'>Date:To Be Declared</h3>
+          <h3 className='venue'>Venue: JECRC College</h3>
+          <h3 className='venue'>Date: 25th August, 2024</h3>
         </div>
         <div className="cards">
           {details.map((el) => {
