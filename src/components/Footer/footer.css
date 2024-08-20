@@ -10,18 +10,20 @@
 }
 
 .footerBoxB {
-  position: relative;
+  /* position: relative;
   z-index: 1;
   width: 100%;
   height: 35vh;
-  background: #000; /* Previous background color */
+  background: #000; 
   transform: translateY(-10%);
   display: flex;
-  justify-content: center; /* Center the content */
-  align-items: center; /* Center the content */
+  justify-content: center; 
+  align-items: center; 
   display: flex;
   flex-direction: column;
-  opacity: 1;
+  opacity: 1; */
+  
+
 }
 
 .footerBoxA {
@@ -58,14 +60,15 @@
   transform: translateY(15%);
 }
 
-.footerBoxBSub1 {
-  gap: 30px;
+/* .footerBoxBSub1 {
+  gap: 20px;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   width: 575px;
   color: #FFF;
- 
-}
+  
+}  */
 
 .navbarWrapper {
   background: #323232; /* Wrapper with gray background */
