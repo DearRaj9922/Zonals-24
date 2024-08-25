@@ -106,7 +106,8 @@ export default function Lucknow() {
                     fontColor={el.color}
                     hoverColor={"#fffff"}
                     background={cardbg}
-                    registerLink={`/lucknow/registration/${el.number}`}
+                    // registerLink={`/lucknow/registration/${el.number}`}
+                      registerLink={"#"}
                     rulebookLink={el.href} />
                 </div>
               </div>
@@ -139,7 +140,8 @@ export default function Lucknow() {
                     image={el.img}
                     fontColor={el.color}
                     background={cardmobbg}
-                    registerLink={`/lucknow/registration/${el.number}`}
+                    // registerLink={`/lucknow/registration/${el.number}`}
+                      registerLink={"#"}
                     rulebookLink={el.href} />
                 </div>
               </div>

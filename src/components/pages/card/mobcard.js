@@ -20,7 +20,8 @@ export default function Mobcard(props) {
             </div>
             {/* <div className="event-date-mob">{props.date}</div> */}
             <div className="buttons-div-mob">
-            <button className="btn-1-mob" style={{border:`3px solid ${props.fontColor}`,color:props.fontColor }} onClick={() => message.error(" Registrations are closed!.")}>Register</button>
+            {/*<button className="btn-1-mob" style={{border:`3px solid ${props.fontColor}`,color:props.fontColor }} onClick={() => message.error(" Registrations are closed!.")}>Register</button>*/}
+                {props.registerLink==="#"?(<button style={{border:`3px solid ${props.fontColor}`,color:props.fontColor }} className="btn-1-mob" onClick={() => message.error(" Registrations are closed!.")}>Register</button>):(<button style={{border:`3px solid ${props.fontColor}`,color:props.fontColor }} className="btn-1-mob" onClick={() => navigate(props.registerLink)}>Register</button>)}
             <Link to={props.rulebookLink}><button className="btn-2-mob" style={{border:`3px solid ${props.fontColor}`,color:props.fontColor }}>RuleBook</button></Link>
           </div>
           </div>

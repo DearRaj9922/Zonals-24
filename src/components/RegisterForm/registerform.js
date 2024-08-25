@@ -66,7 +66,11 @@ const cards = [
 ]
 
 const RegisterForm = (props) => {
-    const {id} = useParams();
+    const abc = useParams();
+    const {id}  = useParams()
+    useEffect(()=>{
+        console.log(abc)
+    },[])
     const [active, setActive] = useState(false);
     const zonal = window.location.href.split('/')[window.location.href.split('/').length-3]
     const [mobile_check, setMobile_check] = useState(false);
@@ -258,7 +262,7 @@ const validateMobileNumber = (e) => {
         valuess.append("contact", user.contact);
         valuess.append("branch", user.branch);
         valuess.append("college", user.college);
-        valuess.append("event", 2);
+        valuess.append("event", zonal==='jaipur'?3:4);
         valuess.append("gender", user.gender);
         valuess.append(
             "tgt_dancing_category",
