@@ -3,7 +3,7 @@
 .RegC-wrapper{
     height: 100vh;
     width: auto;
-    overflow: hidden;
+    overflow: scroll;
     background-image: url('../../../assets/chandigarhmobile.webp');
     background-size: contain;
 }
