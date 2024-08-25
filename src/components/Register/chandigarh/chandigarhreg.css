@@ -3,9 +3,14 @@
 .RegC-wrapper{
     height: 100vh;
     width: auto;
-    overflow: hidden;
+    overflow-y: scroll;
+    overflow-x: hidden;
     background-image: url('../../../assets/chandigarhmobile.webp');
     background-size: contain;
+}
+.RegC-wrapper::-webkit-scrollbar{
+    display: none;
+    width: 0;
 }
 
 /* .RegJ-wrapper img{
