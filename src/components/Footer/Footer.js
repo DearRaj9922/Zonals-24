@@ -45,63 +45,63 @@ const location=useLocation();
 
   return (
     <div>
-      <div className='footerBox'>
+      <div className='footerBoxnew'>
         
-        <div className='footerBoxA'>
+        <div className='footerBoxAnew'>
         
-          <div className='footerSub1'>
+          <div className='footerSub1new'>
             <button onMouseEnter={handleMouseEnter(setChange1)} onMouseLeave={handleMouseLeave(setChange1)}>
-              <img src={change1 ? facebook : facebookLite} className='footerSub1img1' alt="facebook" />
+              <img src={change1 ? facebook : facebookLite} className='footerSub1img1new' alt="facebook" />
             </button>
             <button onMouseEnter={handleMouseEnter(setChange2)} onMouseLeave={handleMouseLeave(setChange2)}>
-              <img src={change2 ? insta : instaLite} className='footerSub1img2' alt="insta" />
+              <img src={change2 ? insta : instaLite} className='footerSub1img2new' alt="insta" />
             </button>
             <button onMouseEnter={handleMouseEnter(setChange3)} onMouseLeave={handleMouseLeave(setChange3)}>
-              <img src={change3 ? twitter : twitterLite} className='footerSub1img3' alt="twitter" />
+              <img src={change3 ? twitter : twitterLite} className='footerSub1img3new' alt="twitter" />
             </button>
             <button onMouseEnter={handleMouseEnter(setChange4)} onMouseLeave={handleMouseLeave(setChange4)}>
-              <img src={change4 ? linkedin : linkedinLite} className='footerSub1img4' alt="linkedin" />
+              <img src={change4 ? linkedin : linkedinLite} className='footerSub1img4new' alt="linkedin" />
             </button>
             <button onMouseEnter={handleMouseEnter(setChange5)} onMouseLeave={handleMouseLeave(setChange5)}>
-              <img src={change5 ? youtube : youtubeLite} className='footerSub1img5' alt="youtube" />
+              <img src={change5 ? youtube : youtubeLite} className='footerSub1img5new' alt="youtube" />
             </button>
           </div>
-          <div className='footerSub2'>
-            <button className='footerButton' onClick={handleClick}>
+          <div className='footerSub2new'>
+            <button className='footerButtonnew' onClick={handleClick}>
               {clicked ? <img src={UpArrow} alt="upArrow" /> : <img src={DownArrow} alt="DownArrow" />}
             </button>
           </div>
         </div>
         
-        <div className={`footerBoxB ${!clicked ? 'open' : 'close'}`}>
-        <div className="footerBoxSub5">
+        <div className={`footerBoxBnew ${!clicked ? 'open' : 'close'}`}>
+        <div className="footerBoxSub5new">
               Choose your city
             </div>
-          <div className='footerBoxBSub1'>
+          <div className='footerBoxBSub1new'>
             {/* <div className="footerBoxSub5">
               Choose your city
             </div> */}
-            <div className="navbarWrapper">
-              <ul className="navbar-nav">
-                <li className="nav-item">
+            <div className="navbarWrappernew">
+              <ul className="navbar-navnew">
+                <li className="nav-itemnew">
 
-                  <Link className="nav-link" style={location.pathname==="/lucknow"?style2:style3} to="/lucknow">Lucknow</Link>
+                  <Link className="nav-linknew" style={location.pathname==="/lucknow"?style2:style3} to="/lucknow">Lucknow</Link>
                   
                   
             
                 </li>
-                <li className="nav-item">
+                <li className="nav-itemnew">
                   {/* <a className="nav-link" href="#">Jaipur</a> */}
-                  <Link className="nav-link" style={location.pathname==="/jaipur"?style2:style3} to="/jaipur">Jaipur</Link>
+                  <Link className="nav-linknew" style={location.pathname==="/jaipur"?style2:style3} to="/jaipur">Jaipur</Link>
                   
                 </li>
-                <li className="nav-item">
+                <li className="nav-itemnew">
                   {/* <a className="nav-link" href="#">Chandigarh</a> */}
-                  <Link className="nav-link" style={location.pathname==="/chandigarh"?style2:style3} to="/chandigarh">Chandigarh</Link>
+                  <Link className="nav-linknew" style={location.pathname==="/chandigarh"?style2:style3} to="/chandigarh">Chandigarh</Link>
                 </li>
-                <li className="nav-item">
+                <li className="nav-itemnew">
                   {/* <a className="nav-link" href="#">Bangalore</a> */}
-                  <Link className="nav-link" style={location.pathname==="/banglore"?style2:style3} to="/banglore">Bengaluru</Link>
+                  <Link className="nav-linknew" style={location.pathname==="/banglore"?style2:style3} to="/banglore">Bengaluru</Link>
                 </li>
               </ul>
             </div>
