@@ -107,8 +107,8 @@ export default function Jaipurgarh() {
                     fontColor={el.color}
                     hoverColor={"#fffff"}
                     background={cardbg}
-                    registerLink={`/jaipur/registration/${el.number}`}
-                    // registerLink={"#"}
+                    // registerLink={`/jaipur/registration/${el.number}`}
+                    registerLink={"#"}
                     rulebookLink={el.href} />
                 </div>
               </div>
@@ -140,7 +140,7 @@ export default function Jaipurgarh() {
                     description={el.description}
                     image={el.img}
                     background={cardmobbg}
-                    registerLink={`/jaipur/registration/${el.number}`}
+                    registerLink={"#"}
                     rulebookLink={el.href} />
                 </div>
               </div>
